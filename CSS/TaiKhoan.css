@@ -1,0 +1,142 @@
+body {
+    font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;  
+}
+
+h1 {
+  text-transform: uppercase; /*chuyển thành chữ hoa*/
+  letter-spacing: 1px;
+  color: #e8885f;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  width: 220px;
+  height: 1px;
+  background-color: #e8885f;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #ffedda;
+    color: #e8885f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.sidebar h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #e8885f;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.sidebar ul li a {
+    color: #e8885f;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 300px;
+}
+.content h2 {
+    font-size: 18px;
+    color: #e8885f;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.info strong {
+    font-weight: bold;
+}
+.edit-button {
+    display: inline-block;
+    background-color: #e8885f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.edit-button:hover {
+    background-color: #ffedda;
+    color: #d65620;
+}
+
+.info-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+#sidebar-dropdown {
+    color: #e8885f;
+}
+
+@media (max-width: 768px) {
+    .sidebar ul {
+        display: none;
+    }
+    .sidebar select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #e8885f;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar select {
+        display: none;
+    }
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+    .sidebar {
+        width: 200px;
+        margin-bottom: 0;
+    }
+    .content {
+        flex-grow: 1;
+    }
+}

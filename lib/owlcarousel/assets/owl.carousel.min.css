@@ -1,0 +1,16 @@
+/*2 nút mũi tên nằm giữa Da mặt và hình ảnh  */
+.owl-carousel {
+    position:relative}
+    
+    /*Thiết lập khung cho hình ảnh không bị vượt ra khỏi khung*/
+    .owl-carousel .owl-stage-outer {
+        position: relative; /* Thiết lập vị trí tương đối cho phần tử. */
+        overflow: hidden; /* Ẩn phần nội dung vượt ra khỏi khung của phần tử. */
+      }
+    
+    
+    /* Định dạng các mục (items) */
+    .owl-item {
+        float: left; /* Sắp xếp các mục theo chiều ngang (trái sang phải) */
+     }
+    

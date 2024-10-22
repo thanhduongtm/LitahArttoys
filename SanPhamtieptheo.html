@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <!--====== Vendor Css ======-->
+    <link rel="stylesheet" href="CSS/SanPham/vendo.css">
+    <!--====== App ======-->
+    <link rel="stylesheet" href="CSS/SanPham/SanPham.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+
+<body>
+    <!----------HEADER---------->
+    <section>
+        <header class="header">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMAGE/logo_ngan.png" width="100px" alt="Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" target="_self">TRANG CHỦ</a>
+                <a href="SanPham.html" target="_self">SẢN PHẨM</a>
+                <a href="SanPham.html" target="_self">PHỤ KIỆN</a>
+                <a href="LienHe.html" target="_self">LIÊN HỆ</a>
+                <a href="TaiKhoan.html" target="_self">TÀI KHOẢN </a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-bars" id="menu"></div>
+                <div class="fas fa-search" id="search"></div>
+                <a href="GioHang.html">
+                    <div class="fas fa-shopping-cart" id="cart"></div>
+                </a>
+                <div class="fas fa-user" id="login" onclick="showLoginOptions()"></div>
+            </div>
+
+            <!-- Mô-đun hiển thị lựa chọn đăng nhập -->
+            <div class="login-options" id="loginOptions">
+                <a href="DangNhap.html">ĐĂNG NHẬP</a>
+                <a href="DangKy.html">ĐĂNG KÝ</a>
+                <a href="QuanTri.html">QUẢN TRỊ</a>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </header>
+    </section>
+    <!----------END HEADER---------->
+    
+    <!--========================== BỘ LỌC ==========================-->
+    <div class="u-s-p-y-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="shop-w-master">
+                        <h1 class="shop-w-master__heading u-s-m-b-30"><i class="fas fa-filter u-s-m-r-8"></i>
+                            <span>Bộ lọc</span>
+                        </h1>
+                        <div class="shop-w-master__sidebar sidebar--bg-snow">
+                            <!-- Phân loại sản phẩm -->
+                            <div class="u-s-m-b-30">
+                                <div class="shop-w">
+                                    <div class="shop-w__intro-wrap">
+                                        <h1 class="shop-w__h">DANH MỤC SẢN PHẨM</h1>
+                                        <span class="fas fa-minus shop-w__toggle" data-target="#s-category"
+                                            data-toggle="collapse"></span>
+                                    </div>
+                                    <div class="shop-w__wrap collapse show" id="s-category">
+                                        <ul class="shop-w__category-list gl-scroll">
+                                            <li class="has-list">
+                                                <ul style="display:block">
+                                                    <li class="has-list">
+
+                                                        <a href="#">MOLLY</a>
+
+                                                        <span
+                                                            class="js-shop-category-span fas fa-plus u-s-m-l-6"></span>
+                                                        <ul>
+                                                            <li>
+
+                                                                <a href="#">MOLLY 100%</a>
+                                                            </li>
+                                                            <li>
+
+                                                                <a href="#">MOLLY 400%</a>
+                                                            </li>
+                                                            <li>
+
+                                                                <a href="#">MOLLY 1000%</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-list">
+
+                                                        <a href="#">BLINDBOX SERIES</a>
+
+                                                        <span
+                                                            class="js-shop-category-span fas fa-plus u-s-m-l-6"></span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">POPMART</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">52TOYS</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">CQTOYS</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">HEY ONE</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">TOYCITY</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-list">
+
+                                                        <a href="#">GẤU BÔNG</a>
+
+                                                        <span
+                                                            class="js-shop-category-span fas fa-plus u-s-m-l-6"></span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">GẤU BÔNG TRANG TRÍ</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">MÓC KHOÁ GẤU</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Đánh giá -->
+                            <div class="u-s-m-b-30">
+                                <div class="shop-w">
+                                    <div class="shop-w__intro-wrap">
+                                        <h1 class="shop-w__h">ĐÁNH GIÁ</h1>
+
+                                        <span class="fas fa-minus shop-w__toggle" data-target="#s-rating"
+                                            data-toggle="collapse"></span>
+                                    </div>
+                                    <div class="shop-w__wrap collapse show" id="s-rating">
+                                        <ul class="shop-w__list gl-scroll">
+                                            <li>
+                                                <div class="rating__check">
+
+                                                    <input type="checkbox">
+                                                    <div class="rating__check-star-wrap"><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                                </div>
+
+                                                <span class="shop-w__total-text">(15)</span>
+                                            </li>
+                                            <li>
+                                                <div class="rating__check">
+
+                                                    <input type="checkbox">
+                                                    <div class="rating__check-star-wrap"><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="far fa-star"></i>
+
+                                                    </div>
+                                                </div>
+
+                                                <span class="shop-w__total-text">(20)</span>
+                                            </li>
+                                            <li>
+                                                <div class="rating__check">
+
+                                                    <input type="checkbox">
+                                                    <div class="rating__check-star-wrap"><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i>
+
+                                                    </div>
+                                                </div>
+
+                                                <span class="shop-w__total-text">(25)</span>
+                                            </li>
+                                            <li>
+                                                <div class="rating__check">
+
+                                                    <input type="checkbox">
+                                                    <div class="rating__check-star-wrap"><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i>
+
+                                                    </div>
+                                                </div>
+
+                                                <span class="shop-w__total-text">(30)</span>
+                                            </li>
+                                            <li>
+                                                <div class="rating__check">
+
+                                                    <input type="checkbox">
+                                                    <div class="rating__check-star-wrap"><i class="fas fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i>
+
+                                                    </div>
+                                                </div>
+
+                                                <span class="shop-w__total-text">(31)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!--GIÁ TIỀN-->
+                            <div class="u-s-m-b-30">
+                                <div class="shop-w">
+                                    <div class="shop-w__intro-wrap">
+                                        <h1 class="shop-w__h">Giá tiền</h1>
+                                        <span class="fas fa-minus shop-w__toggle" data-target="#s-price"
+                                            data-toggle="collapse"></span>
+                                    </div>
+                                    <div class="shop-w__wrap collapse show" id="s-price">
+                                        <form class="shop-w__form-p">
+                                            <div class="shop-w__form-p-wrap">
+                                                <div>
+                                                    <label for="price-min"></label>
+                                                    <input class="input-text input-text--primary-style" type="text"
+                                                        id="price-min" placeholder="Tối thiểu">
+                                                </div>
+                                                <div>
+                                                    <label for="price-max"></label>
+                                                    <input class="input-text input-text--primary-style" type="text"
+                                                        id="price-max" placeholder="Tối đa">
+                                                </div>
+                                                <div>
+                                                    <button
+                                                        class="btn btn--icon fas fa-angle-right btn--e-transparent-platinum-b-2"
+                                                        type="submit"></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--======================= SẮP XẾP =============================-->
+                <div class="col-lg-9 col-md-12">
+                    <div class="shop-p">
+                        <div class="shop-p__toolbar u-s-m-b-30">
+                            <div class="shop-p__meta-wrap u-s-m-b-60">
+                                <form>
+
+                                    <div class="u-s-m-b-8"><select class="select-box select-box--transparent-b-2">
+                                            <option selected>Sắp xếp: Sản phẩm mới </option>
+                                            <option>Sắp xếp: Sản phẩm bán chạy</option>
+                                            <option>Sắp xếp: Sản phẩm đánh giá cao</option>
+                                            <option>Sắp xếp: Giá rẻ</option>
+                                            <option>Sắp xếp: Giá cao</option>
+                                        </select></div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--========================= SẢN PHẨM ===========================-->
+                    <div class="shop-p__collection">
+                        <div class="row is-grid-active">
+                            <!--================================================SẢN PHẨM 1==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/11.png"
+                                                alt="Mặt nạ đát sét Innisfree"></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Móc khoá gấu</a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">LABUBU HAVE A SEAT</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                                            <span class="product-m__review">(10)</span>
+                                        </div>
+                                        <div class="product-m__price">4.000.000đ
+
+                                            <span class="product-m__discount">4.400.000</span>
+                                        </div>
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Cô bạn Molly ấn tượng với trang phục theo concept quả trứng. Với tone màu nâu nhạt, pha chút hoạ tiết Châu Âu, đem lại cho bạn cảm giác vừa ấm áp vừa thời thượng.</span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--================================================SẢN PHẨM 2==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/12.png"
+                                                alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Móc khoá gấu </a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">LABUBU HAVE A SEAT</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                                            <span class="product-m__review">(5)</span>
+                                        </div>
+                                        <div class="product-m__price">3.960.000đ
+                                            <span class="product-m__discount">4.400.000đ</span>
+                                        </div>
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Bộ sưu tập  Labubu Set 6 hộp v2 have a seat từ POP MART mang đến những mô hình đồ chơi độc đáo và ấn tượng, lấy cảm hứng từ thiên nhiên hoang dã.</span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--================================================SẢN PHẨM 3==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/13.png" alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Molly 400%</a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">SPACE MOLLY MINIONS</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                                            <span class="product-m__review">(5)</span>
+                                        </div>
+
+                                        <div class="product-m__price">4.500.000đ
+                                            <span class="product-m__discount">5.000.000đ</span>
+                                        </div>
+
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Cô bạn Molly ấn tượng với trang phục theo concept Minions. Cùng Mega Space Molly kết hợp với Minions sẵn sàng cho chuyến phiêu lưu siêu vui nhộn sắp tới nhé!
+                                                </span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--================================================SẢN PHẨM 4==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/14.png" alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Molly 400%</a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">SPACE MOLLY BASKETBALL</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                            <span class="product-m__review">(1)</span>
+                                        </div>
+
+                                        <div class="product-m__price">4.980.000đ
+                                            <span class="product-m__discount">5.200.000đ</span>
+                                        </div>
+
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span> Phiên bản Space Molly kết hợp cùng những quả bóng rổ sắc cam rực rỡ làm bạn nhỏ Molly hài hoà và đặc biệt hơn.</span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--================================================SẢN PHẨM 5==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/15.png" alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Molly 400%</a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">SPACE MOLLY COCA V2</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+
+                                            <span class="product-m__review">(5)</span>
+                                        </div>
+
+                                        <div class="product-m__price">10.000.000đ
+                                            <span class="product-m__discount">10.500.000đ</span>
+                                        </div>
+
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Sự kết hợp đặc biệt giữa Space Molly và hãng nước nổi tiếng Coca Cola tạo nên một phiên bản hoàn chỉnh đem đến cho người sưu tầm. </span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--================================================SẢN PHẨM 6==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/16.png" alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Móc khoá gấu</a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">MÓC KHOÁ CIMMY</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                                            <span class="product-m__review">(8)</span>
+                                        </div>
+
+                                        <div class="product-m__price">500.000đ
+                                           
+                                        </div>
+
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Móc khoá gấu bông mềm mại với nhiều màu sắc pastel xinh xắn sẽ làm outfit của bạn thêm phần đáng yêu.</span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--================================================SẢN PHẨM 7==================================-->
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product-m">
+                                    <div class="product-m__thumb">
+
+                                        <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                            href="CTSanPham.html">
+
+                                            <img class="aspect__img" src="IMAGE/TrangChu/17.png" alt=""></a>
+
+                                        <div class="product-m__add-cart">
+
+                                            <a class="btn--e-brand" data-modal="modal" data-modal-id="#add-to-cart">Thêm
+                                                vào giỏ hàng</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-m__content">
+                                        <div class="product-m__category">
+
+                                            <a href="shop-side-version-2.html">Móc khoá gấu </a>
+                                        </div>
+                                        <div class="product-m__name">
+
+                                            <a href="CTSanPham.html">MÓC KHOÁ PUCKY FOREST</a>
+                                        </div>
+                                        <div class="product-m__rating gl-rating-style"><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                            <span class="product-m__review">(5)</span>
+                                        </div>
+                                        <div class="product-m__price">600.000đ</div>
+                                        <div class="product-m__hover">
+                                            <div class="product-m__preview-description">
+
+                                                <span>Móc khoá gấu bông mềm mại với nhiều màu sắc pastel xinh xắn sẽ làm outfit của bạn thêm phần đáng yêu.</span>
+                                            </div>
+                                            <div class="product-m__wishlist">
+
+                                                <a class="far fa-heart" href="#" data-tooltip="tooltip"
+                                                    data-placement="top" title="Add to Wishlist"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-s-p-y-60">
+
+        <!--=========================== PHÂN TRANG=====================-->
+        <ul class="shop-p__pagination">
+            <li>
+
+                <a href="SanPham.html">1</a>
+            </li>
+            <li class="is-active">
+
+                <a href="SanPhamtieptheo.html">2</a>
+            </li>
+            <li>
+
+                <a class="fas fa-angle-right" href="SanPham.html"></a>
+            </li>
+        </ul>
+    </div>
+
+
+   <!-----FOOTER----->
+   <footer class="footer">
+    <div class="block">
+        <!--LOGO-->
+        <img width="100" src="IMAGE/logo.png" alt="Logo">
+        <p>Litah Arttoys - Mang đến cho khách hàng những sản phẩm độc đáo và chất lượng.
+        </p>
+    </div>
+    <div class="block"> <!--LIÊN HỆ-->
+        <h3> LIÊN HỆ </h3>
+        <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"> <i class="fas fa-map"></i> 86 Tản Đà,
+            Phường 11, Quận 5, Tp.HCM </a>
+        <a href="tel:0868 959 902"><i class="fas fa-phone"></i> 0868 959 902</a>
+        <a href="mailto:litaharttoys@gmail.com"><i class="fas fa-envelope"></i> litaharttoys@gmail.com</a>
+    </div>
+    <div class="block"> <!--CHÍNH SÁCH-->
+        <h3> CHÍNH SÁCH </h3>
+        <a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a>
+        <a href="#"><i class="fas fa-chevron-right"></i> Chính sách mua hàng</a>
+        <a href="#"><i class="fas fa-chevron-right"></i> Chương trình khuyến mãi</a>
+    </div>
+</footer>
+<!-----END FOOTER----->
+
+    <!--====== GẮN LINK JAVASCRIPTS ======-->
+    <!--====== Vendor Js ======-->
+    <script src="JS/SanPham/vendo.js"></script>
+
+    <!--====== jQuery Shopnav plugin ======-->
+    <script src="JS/SanPham/jquery.shopnav.js"></script>
+
+    <!--====== App ======-->
+    <script src="JS/SanPham/SanPham.js"></script>
+    <script src="JS/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+ h1 {
+    text-transform: uppercase; /*chuyển thành chữ hoa*/
+    letter-spacing: 1px;
+    color: #e8885f;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+  }
+  
+  h1:after {
+    content: " ";
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: #e8885f;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+
+/*-----TRANG ĐĂNG KÝ-----*/
+.breadcrumb__wrap {
+    background-color: #f1e1e159; /*màu nền thanh cấu trúc site*/
+    padding: 1.125rem;
+    border-radius: 0.1875rem;
+}
+
+.breadcrumb__list {
+    list-style: none; /*xóa gạch đầu dòng danh sách*/
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.breadcrumb__list>li {
+    display: inline-block;
+}
+
+.breadcrumb__list>li>a {
+    color: brown;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.5s;
+    text-decoration: none; /*xóa gạch chân liên kết*/
+}
+
+.breadcrumb__list>li>a:hover {
+    color: #333333;
+}
+
+.breadcrumb__list>li.is-marked>a {
+    color: #333333;
+}
+
+/*định dạng phần tử sau mỗi list item*/
+.breadcrumb__list>li.has-separator:after {
+    content: '/'; /*Thêm ký tự '/' vào cuối mỗi phần tử list item*/
+    margin: 0 18px; /* khoảng cách giữa dấu phân cách và phần tử liên kết*/
+}
+
+.section__intro {
+    position: relative;
+}
+
+.section__content {
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section__heading {
+    font-weight: 600;
+    letter-spacing: -.02rem;
+    font-size: 28px;
+    position: relative;
+}
+
+.section__text-wrap {
+    text-align: center;
+}
+
+.u-c-secondary {
+    color: #333333 !important;
+}
+
+.l-f-o {
+    border: 1px solid #eee;
+}
+
+.l-f-o__pad-box {
+    padding: 20px;
+}
+
+.l-f-o__form {
+    width: 100%;
+}
+
+.l-f-o .input-text,
+.l-f-o .btn,
+.l-f-o .select-box {
+    border-radius: 6px;
+}
+
+.l-f-o .input-text {
+    width: 100%;
+}
+
+.l-f-o .btn {
+    font-weight: 600;
+    padding: 5px 2px;
+}
+
+.l-f-o__create-link {
+    font-size: 14px;
+    text-align: center;
+    padding: 12px;
+    display: block;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.dash__box--bg-white {
+    background-color: #f1e1e159;
+}
+
+.dash__box--border {
+    border: 1px solid #eee;
+}
+
+/*màu cho hiệu ứng bóng đổ*/
+.dash__box--shadow {
+    box-shadow: -2px 0px 14px 0 rgba(36, 37, 38, 0.08);
+}
+
+.dash__box--radius {
+    border-radius: 25px;
+}
+.section__intro {
+    position: relative;
+}
+
+.section__content {
+    position: relative;
+}
+ 
+.u-s-p-b-60 {
+    padding-bottom: 3.75rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* giữ nguyên kích thước được xác định, bao gồm cả border và padding, và không làm thay đổi kích thước nội dung bên trong.*/
+}
+
+.row--center {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.u-s-m-b-30 {
+    margin-bottom: 1.875rem;
+}
+
+.col-lg-9,
+.col-md-3 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-lg-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.gl-text {
+    display: block;
+    color: #a0a0a0;
+    font-size: 15px;
+}
+
+.u-s-m-b-15 {
+    margin-bottom: 0.9375rem;
+}
+
+.gl-s-api {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/*GOOGLE*/
+
+.gl-s-api__btn--gplus {
+    background-color: #e8885f;
+}
+
+
+.gl-s-api__btn--gplus:hover {
+    background-color: #e76554;
+}
+
+
+.gl-s-api__btn {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.5s linear;
+}
+
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.gl-s-api__btn span {
+    margin-left: 10px;
+}
+
+.gl-label {
+    margin-bottom: 8px;
+    display: block;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.input-text--primary-style {
+    color: #333333;
+    transition: all 0.6s linear;
+    border: 2px solid transparent;
+    background-color: #f1f1f1;
+}
+
+.input-text {
+    font-size: 12px;
+    background-clip: padding-box;
+    padding: 0 18px;
+    height: 40px;
+}
+
+.gl-inline {
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.gl-inline div {
+    flex: 1;
+    margin-right: 14px;
+}
+
+.select-box {
+    display: block;
+    max-width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 12px 11px 15px;
+    cursor: pointer;
+    line-height: 1.2;
+}
+.select-box--primary-style {
+    color: #333333;
+    border: 2px solid transparent;
+    background-color: #f1f1f1;
+}
+.u-w-100 {
+    width: 100%;
+}
+
+/* Ô TẠO TÀI KHOẢN*/
+.btn--e-transparent-brand-b-2 {
+    color: #e8885f;
+    border: 2px solid #eee;
+    background-color: transparent;
+    transition: border-color .5s ease-in;
+}
+
+.btn--e-transparent-brand-b-2:hover {
+    background-color: #e8885f;
+    border-color: #ffedda;
+    color: #ffedda;
+}
+
+.btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.gl-inline div:last-child {
+    margin-right: 0;
+}
+
+.gl-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ed7399;
+    transition: color 0.5s linear;
+    text-decoration: none;
+}
+
+.gl-link:hover {
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+}
+@media (max-width: 575px){
+.gl-inline div {
+    display: block;
+    margin-right: 0;
+}}
+@media (max-width: 575px){
+.gl-dob .select-box {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-right: 0;
+}}
+
+@media (max-width: 575px){
+.gl-inline {
+    display: block;
+}}

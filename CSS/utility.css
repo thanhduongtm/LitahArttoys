@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/**
+* Utility classes for spacing:
+* A wide range of shorthand margin and padding utility classes to modify an
+* an element’s appearance.
+* Prefix understanding: u means utility which is a prefix for root namespace,
+* s means spacing which is a prefix for sub namespace, m means margin,
+* p means padding. e.g. `u-s-m-t-22` means apply top margin 22 pixels that by default converted to rem unit.
+
+/* Margin with value `10`. */
+.u-s-m-b-10 {
+ margin-bottom: 0.625rem; }
+
+
+/* Margin with value `15`. */
+.u-s-m-b-15 {
+ margin-bottom: 0.9375rem; }
+
+
+/* Margin with value `16`. */
+.u-s-m-b-16 {
+ margin-bottom: 1rem; }
+
+
+/* Margin with value `30`. */
+.u-s-m-b-30 {
+ margin-bottom: 1.875rem; }
+
+/* Margin with value `6`. */
+.u-s-m-t-6 {
+    margin-top: 0.75rem; }
+
+/* Padding with value `60`. */
+
+
+.u-s-p-y-60 {
+ padding-top: 3.75rem;
+ padding-bottom: 3.75rem; }
+
+
+
+
+
+
+

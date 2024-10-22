@@ -1,0 +1,449 @@
+
+/*----------SỬ DỤNG NHIỀU----------*/
+body {
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+h1 {
+  text-transform: uppercase; /*chuyển thành chữ hoa*/
+  letter-spacing: 1px;
+  color: #e8885f;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  width: 220px;
+  height: 1px;
+  background-color: #e8885f;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+/*-----NÚT ĐẶT LỊCH, XEM NGAY, ... -----*/
+/*căn giữa*/
+.container {
+  text-align: center;
+}
+
+/*style khối*/
+.btn {
+  text-decoration: none;
+  color: #e8885f;
+  font-weight: bold;
+  font-size: 1.7rem;
+  background-color: #ffedda;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all .3s;
+}
+
+/*hiệu ứng đổi màu khi di chuột đến*/
+.btn:hover,
+.btn:active {
+  color: white;
+  background-color: #e8885f;
+}
+/*-----SLIDER-----*/
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto; /*margin top và bottom là 0, left và right là auto. giúp căn giữa slider*/
+}
+
+/*Chỉnh dấu mũi tên*/
+.slider-container .navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.slider-container .navigation .prevBtn, .nextBtn {
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #e8885f ;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider-container .navigation .prevBtn {
+  position: absolute;
+  left: 10px;
+}
+
+.slider-container .navigation .nextBtn {
+  position: absolute;
+  right: 10px;
+}
+
+/*Định dạng chấm tròn khi chuyển slider*/
+.slider-container .dots-container {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider-container .dots-container .dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slider-container .dots-container .dot.active {
+  background-color: #e8885f;
+}
+/*-----END SLIDER-----*/
+
+/*-----SẢN PHẨM MỚI-----*/
+
+.carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-item {
+  min-width: 20%; 
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.1);
+}
+
+.overlaysp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(204, 204, 204, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.product-image:hover .overlaysp {
+  opacity: 1;
+}
+
+.option-btn, .quick-view-btn {
+  background-color: #e8885f;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.product-name, .product-price {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.product-price {
+  color:#e8885f
+}
+
+.carousel-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#prev, #next {
+  background-color: #e8885f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+/*-----END SẢN PHẨM MỚI-----*/
+
+/*----- SẢN PHẨM BÁN CHẠY-----*/
+.container1 {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.product-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.product-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.product-title {
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color: #333;
+}
+.product-price {
+  color: #e60000;
+  font-weight: bold;
+  font-size: 18px;
+}
+.contact-link {
+  font-size: 16px;
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.view-more {
+  text-align: center;
+  margin-top: 20px;
+}
+.view-all {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.view-all:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .product-grid1 {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid1 {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .product-title {
+      font-size: 16px;
+  }
+  .product-price {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid1 {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  .product-item {
+      padding: 10px;
+  }
+  .product-title {
+      font-size: 14px;
+  }
+  .product-price {
+      font-size: 14px;
+  }
+  .view-all {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+/*-----END SẢN PHẨM BÁN CHẠY-----*/
+
+/*----------FEEDBACK----------*/
+
+.slide-container {
+  max-width: 750px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.slide-content {
+  margin: 0 40px;
+}
+
+.card {
+  width: 320px;
+  border-radius: 25px;
+  background-color: #ffedda;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fe9d74;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #fe9d74;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #ffedda;
+}
+/*hình của khách*/
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffedda;
+}
+
+/*icon ngôi sao*/
+.card .rating {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #FFB90F;
+  text-align: center;
+}
+
+/*mô tả feedback của khách hàng*/
+.description {
+  font-size: 14px;
+  color: #fe9d74;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #fe9d74;
+  border-radius: 6px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/*----------END FEEDBACK----------*/
+
+/* Media query cho hiển thị trên điện thoại */
+@media (max-width: 768px) {
+  .service, .block, .feedback, .booking-form, .container-CSVC .csvc, .image-row
+  {
+    width: 100%;
+  }
+}
+/* Media query cho màn hình nhỏ hơn 600px */
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column; /* Chuyển sang kiểu dạng cột */
+    align-items: stretch; /* Mở rộng chiều rộng của các phần tử theo chiều ngang */
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-item {
+    min-width: 25%; /* 4 sp */
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item {
+    min-width: 33.33%; /* 3 sp */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 50%; /* 2 sp */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+    min-width: 100%; /* 1 sp */
+  }
+}

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <!--Link Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <!--Link icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--Link css Trang Chu-->
+    <link rel="stylesheet" href="CSS/TrangChu.css">
+    <!--Link css header-->
+    <link rel="stylesheet" href="CSS/header.css">
+    <!--Link css footer-->
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!--Link css feedback-->
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <!----------HEADER---------->
+    <section>
+        <header class="header">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMAGE/logo_ngan.png" width="100px" alt="Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" target="_self">TRANG CHỦ</a>
+                <a href="SanPham.html" target="_self">SẢN PHẨM</a>
+                <a href="SanPham.html" target="_self">PHỤ KIỆN</a>
+                <a href="LienHe.html" target="_self">LIÊN HỆ</a>
+                <a href="TaiKhoan.html" target="_self">TÀI KHOẢN </a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-bars" id="menu"></div>
+                <div class="fas fa-search" id="search"></div>
+                <a href="GioHang.html">
+                    <div class="fas fa-shopping-cart" id="cart"></div>
+                </a>
+                <div class="fas fa-user" id="login" onclick="showLoginOptions()"></div>
+            </div>
+
+            <!-- Mô-đun hiển thị lựa chọn đăng nhập -->
+            <div class="login-options" id="loginOptions">
+                <a href="DangNhap.html">ĐĂNG NHẬP</a>
+                <a href="DangKy.html">ĐĂNG KÝ</a>
+                <a href="QuanTri.html">QUẢN TRỊ</a>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </header>
+    </section>
+    <!----------END HEADER---------->
+
+    <!-----SLIDER----->
+    <div class="slider-container">
+        <div class="slide">
+            <a href="SanPham.html">
+            <img width=100%; height=80%; src="IMAGE/TrangChu/1.png" alt="Image 1">
+            </a>
+        </div>
+        <div class="slide">
+            <a href="SanPham.html">
+            <img width=100%; height=80%; src="IMAGE/TrangChu/2.png" alt="Image 2">
+            </a>
+        </div>
+
+        <div class="navigation">
+            <button class="prevBtn" onclick="changeSlide(-1)">&#60;</button>
+            <button class="nextBtn" onclick="changeSlide(1)">&#62;</button>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+    </div>
+
+    <!-----END SLIDER----->
+
+    <!-----SẢN PHẨM MỚI---->
+    <h1>SẢN PHẨM MỚI</h1>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/3.png" alt="Space Molly Egg Tart" >
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">SPACE MOLLY EGG TART</p>
+                <p class="product-price">5.500.000₫</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/4.png" alt="SPACE MOLLY MINIONS">
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">SPACE MOLLY MINIONS</p>
+                <p class="product-price">5.000.000₫</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/5.png" alt="SPACE MOLLY BASKETBALL">
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">SPACE MOLLY BASKETBALL</p>
+                <p class="product-price">5.200.000₫</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/6.png" alt="SPACE MOLLY COCA V2">
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">SPACE MOLLY COCA V2</p>
+                <p class="product-price">10.500.000₫</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/7.png" alt="MÓC KHOÁ CIMMY">
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">MÓC KHOÁ CIMMY</p>
+                <p class="product-price">500.000₫</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="product-image">
+                    <img src="IMAGE/TrangChu/8.png" alt="MÓC KHOÁ PUCKY FOREST">
+                    <div class="overlaysp">
+                        <a href="CTSanPham.html">
+                            <button class="option-btn">Xem</button>
+                       </a> 
+                        <a href="ThanhToan.html">
+                        <button class="quick-view-btn">Mua Ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <p class="product-name">MÓC KHOÁ PUCKY FOREST</p>
+                <p class="product-price">600.000₫</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-controls">
+        <button id="prev">◀</button>
+        <button id="next">▶</button>
+    </div>
+    <!-----END SẢN PHẨM MỚI---->
+
+    <!-----SẢN PHẨM BÁN CHẠY---->
+    <h1>SẢN PHẨM BÁN CHẠY </h1>
+    <div class="container1">
+        <div class="product-grid1">
+            <div class="product-item">
+                <img src="/IMAGE/TrangChu/9.png" alt="PIMOMO">
+                <div class="product-title">GẤU BÔNG PIMOMO</div>
+                <div class="product-price">1.200.000</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/10.png" alt="SPACE MOLLY LOUIS DE GUZMAN">
+                <div class="product-title">SPACE MOLLY LOUIS DE GUZMAN</div>
+                <div class="product-price">280.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/11.png" alt="LABUBU HAVE A SEAT">
+                <div class="product-title">LABUBU HAVE A SEAT</div>
+                <div class="product-price">4.400.000</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/12.png" alt="PUCKY FOREST">
+                <div class="product-title">PUCKY FOREST</div>
+                <div class="product-price">3.500.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/13.png" alt="SPACE MOLLY MICKEY">
+                <div class="product-title">SPACE MOLLY MICKEY</div>
+                <div class="product-price">6.500.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/14.png" alt="DELICIOUS BUNNY">
+                <div class="product-title">ELICIOUS BUNNY</div>
+                <div class="product-price">2.800.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/15.png" alt="MR.PA ANIMALS">
+                <div class="product-title">MR.PA ANIMALS</div>
+                <div class="product-price">1.300.000</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/16.png" alt="MIGO">
+                <div class="product-title">MIGO</div>
+                <div class="product-price">1.500.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/17.png" alt="OZAI SPRING">
+                <div class="product-title">OZAI SPRING</div>
+                <div class="product-price">2.500.000₫</div>
+            </div>
+            <div class="product-item">
+                <img src="IMAGE/TrangChu/18.png" alt="BAOAO CUDDLE">
+                <div class="product-title">BAOAO CUDDLE</div>
+                <div class="product-price">2.500.000₫</div>
+            </div>
+        </div>
+        <div class="container">
+            <a href="SanPham.html" class="btn"> XEM THÊM </a> <br> <br>
+        </div>
+    </div>
+    <!-----END SẢN PHẨM BÁN CHẠY---->
+    
+    <!----------FEEDBACK---------->
+        <div class="feedback">
+            <h1>KHÁCH HÀNG NÓI VỀ LITAH ARTTOYS</h1>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <!--FB1-->
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"> </span>
+                                <div class="card-image">
+                                    <img src="IMAGE/TrangChu/19.png" alt=" " class="card-img">
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="card-content">
+                                <button class="button"> Tiktoker Châu Muối</button>
+                                <p class="description"> Trải nghiệm mua blindbox mở ra được bé Secret thật sự rất tuyệt vời.
+                                    Cảm ơn shop đã giao hàng siêu tốc đến cho mình ngay trong ngày 😍.
+                                </p>
+                            </div>
+                        </div>
+                        <!--FB2-->
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"> </span>
+                                <div class="card-image">
+                                    <img src="IMAGE/TrangChu/20.png" alt=" " class="card-img">
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="card-content">
+                                <button class="button"> Tiktoker Phương Min</button>
+                                <p class="description"> Set Wendy này đáng yêu cực luôn, bé nào cũng xinh và mềm, đặc biệt
+                                    có cả dây đeo túi nữa. Highly recommend mọi người nè.
+                                </p>
+                            </div>
+                        </div>
+                        <!--FB3-->
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"> </span>
+                                <div class="card-image">
+                                    <img src="IMAGE/TrangChu/21.png" alt=" " class="card-img">
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="card-content">
+                                <button class="button"> Thảo Nhi</button>
+                                <p class="description"> Nhân viên shop dễ thương, nhiệt tình, tìm được đủ mẫu theo mong muốn của mình.
+                                    Mua được ba món chính hãng mà giá tốt quá chừng 🫶🏻
+                                </p>
+                            </div>
+                        </div>
+                        <!--FB4-->
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"> </span>
+                                <div class="card-image">
+                                    <img src="IMAGE/TrangChu/22.png" alt=" " class="card-img">
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="card-content">
+                                <button class="button"> Ngọc Hà</button>
+                                <p class="description"> Labubu hot quá trời mà giờ tui mới tìm được shop uy tín để mua.
+                                    Ẻm xinh cực, chất lông mềm mịn, xứng đáng best seller mùa này rồi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    <!-----FOOTER----->
+    <footer class="footer">
+        <div class="block">
+            <!--LOGO-->
+            <img width="100" src="IMAGE/logo.png" alt="Logo">
+            <p> Litah Arttoys - Mang đến cho khách hàng những sản phẩm độc đáo và chất lượng.
+            </p>
+        </div>
+        <div class="block"> <!--LIÊN HỆ-->
+            <h3> LIÊN HỆ </h3>
+            <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"> <i class="fas fa-map"></i> 86 Tản Đà,
+                Phường 11, Quận 5, Tp.HCM </a>
+            <a href="tel:0868 959 902"><i class="fas fa-phone"></i> 0868 959 902</a>
+            <a href="mailto:litaharttoys@gmail.com"><i class="fas fa-envelope"></i> litaharttoys@gmail.com</a>
+        </div>
+        <div class="block"> <!--CHÍNH SÁCH-->
+            <h3> CHÍNH SÁCH </h3>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách mua hàng</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chương trình khuyến mãi</a>
+        </div>
+    </footer>
+    <!-----END FOOTER----->
+
+</body>
+<!--Swiper JS-->
+<script src="JS/swiper-bundle.min.js"> </script>
+<!--Link js feedback-->
+<script src="JS/feedback.js"></script>
+<!--Link js header-->
+<script src="JS/header.js"></script>
+
+<script src="JS/script.js"></script>
+
+<script src="JS/TrangChu.js"></script>
+
+</html>

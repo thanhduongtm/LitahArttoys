@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --pink: #e8885f;
+    --nau: #e8885f;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(1,1,1,.1);
+    --border: .2rem solid rgba(1,1,1,.1);
+    --outline: .1rem solid rgba(1,1,1,.1);
+    --outline-hover: .2rem solid var(--nau);
+}
+section{
+    padding: 55px;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+  }
+.header {
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize; /*Hiển thị chữ cái đầu tiên của mỗi từ là chữ in hoa*/
+    transition: all .2s linear; /*Hiệu ứng chuyển động với tg là 0.2s và kiểu là linear*/
+    position: fixed; /*Phần tử được giữ ở một vị trí cố định trên màn hình.*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/*--Điều chỉnh chữ trên thanh menu*/
+.header .navbar a{
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    color: var(--pink);
+    text-decoration: none;
+}
+
+/*--Điều chỉnh chữ trên thanh menu sau khi di chuột đến*/
+.header .navbar a:hover{
+    color: var(--nau);
+    border-bottom: 2px solid var(--nau); /*gạch chân ở dưới chữ*/
+}
+
+/*--Điều chỉnh icon*/
+.header .icon div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--nau);
+    font-size: 2rem;
+    margin-right: .3rem;
+    cursor: pointer; /*khi di chuột đến sẽ đổi thành ngón tay: thể hiện có thể nhấp vào*/
+    text-align: center;
+}
+
+/*--Điều chỉnh icon sau khi di chuột đến*/
+.header .icon div:hover{
+    background: var(--pink);
+    color: #fff;
+
+}
+
+#menu{
+    display: none; /*phần tử id này không hiển thị trên giao diện máy tính*/
+}
+
+/*--Điều chỉnh search form*/
+.header .search-form{
+    position: absolute; /* Thiết lập vị trí tuyệt đối cho phần tử */
+    top: 110%; 
+    right: -110%;
+    width: 50rem; 
+    height: 5rem; 
+    background: #fff; /* Đặt màu nền */
+    border-radius: .5rem; /* Đặt góc bo tròn */
+    overflow: hidden; /* Ẩn bớt nội dung vượt ra khỏi khung */
+    display: flex; /* Sử dụng flexbox để quản lý layout */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    box-shadow: var(--box-shadow); /* Hiệu ứng bóng đổ  */
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear; /*Hiệu ứng chuyển động với tg là 0.4s và kiểu là linear (đồng đều) */
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--nau);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--nau);
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color: var(--pink);
+}
+
+/* Ẩn mô-đun đăng nhập ban đầu */
+.login-options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    top: 30px;
+    right: 0;
+    z-index: 100;
+}
+
+.login-options a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color:#e8885f;
+    font-size: 1.5rem;
+}
+
+.login-options a:hover {
+    background-color: #f5f5f5;
+}
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    } 
+    
+    .header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    #menu{
+        display: inline-block;
+    }
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+}
+/*
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+.testnd{
+    margin-top: 0;
+    padding-top: 90px;
+    font-size: 100px;
+}
+*/

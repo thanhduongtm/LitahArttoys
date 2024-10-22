@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thêm mới</title>
+
+  <!--============ Tailwind bao gồm ==============-->
+  <link rel="stylesheet" href="CSS/QuanTri/main.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!--===========================ĐẦU TRANG===================================-->
+    <nav id="navbar-main" class="navbar is-fixed-top">
+      <div class="navbar-brand">
+        <!--==============MENU ĐẦU TRANG BÊN TRÁI, TRY CẬP ĐẾN CÁC TRANG KHÁC CỦA ADMIN===============-->
+        <a class="navbar-item mobile-aside-button">
+          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+        </a>
+
+        <!--==============KHUNG TÌM KIẾM Ở ĐẦU TRANG============-->
+        <div class="navbar-item">
+          <div class="control"><input placeholder="Tìm kiếm mọi thứ..." class="input"></div>
+        </div>
+      </div>
+
+      <!--========================MENU BÊN PHẢI DÙNG ĐỂ ĐĂNG XUẤT VÀ CÁC LỰA CHỌN KHÁC============ -->
+      <div class="navbar-brand is-right">
+        <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+          <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+        </a>
+      </div>
+
+      <!--=============MENU PHỤ BÊN TRÁI======================-->
+      <div class="navbar-menu" id="navbar-menu">
+        <div class="navbar-end">
+          <!--==============NÚT ĐĂNG XUẤT Ở GÓC PHẢI TRÊN ============-->
+          <div class="navbar-item dropdown has-divider has-user-avatar">
+            <hr class="navbar-divider">
+            <a href="index.html" class="navbar-item">
+              <span class="icon"><i class="mdi mdi-logout"></i></span>
+              <span>Đăng xuất</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+  </div>
+  </nav>
+
+
+  <!--===========================ĐẦU TRANG: KẾT THÚC ===================================-->
+
+<!--======================MENU CHÍNH LIÊN KẾT CÁC TRANG================-->
+<aside class="aside is-placed-left is-expanded">
+
+  <div class="menu is-menu-main">
+    <p class="menu-label">QUẢN TRỊ</p>
+    <!--================ MỤC CON: DASHBOARD ======================-->
+    <ul class="menu-list">
+      <li class="--set-active-tables-html">
+        <a href="QuanTri.html">
+          <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+          <span class="menu-item-label">Tổng quan</span>
+        </a>
+      </li>
+    </ul>
+
+    <!--================ MỤC CON: SẢN PHẨM ======================-->
+    <ul class="menu-list">
+      <li class="active">
+        <a href="Ad-SanPham.html">
+          <span class="icon"><i class="mdi mdi-table"></i></span>
+          <span class="menu-item-label">Sản Phẩm</span>
+        </a>
+      </li>
+    </ul>
+      <!--================ MỤC CON: THÀNH VIÊN ======================-->
+      <ul class="menu-list">
+      <li class="--set-active-profile-html">
+        <a href="Ad-ThanhVien.html">
+          <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+          <span class="menu-item-label">Thành viên</span>
+        </a>
+      </li>
+    </ul>
+    <!--================ MỤC CON: KHUYẾN MÃI ======================-->
+    <ul class="menu-list">
+      <li class="--set-active-profile-html">
+        <a href="Ad-KhuyenMai.html">
+          <span class="icon"><i class="mdi mdi-tag-text-outline"></i></span>
+          <span class="menu-item-label">Khuyến mãi</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+<!--======================MENU CHÍNH LIÊN KẾT CÁC TRANG: KẾT THÚC ================-->
+
+
+  <!--====================TRANG CHÍNH=======================-->
+  <section class="is-title-bar">
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+      <ul>
+        <li>Quản trị</li>
+        <li>Thêm mới</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--=======================TIÊU ĐỀ TRANG THÊM MỚI ==================-->
+  <section class="is-hero-bar">
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+      <h1 class="title">
+        Thêm mới sản phẩm/dịch vụ
+      </h1>
+
+      <!--====Nút Làm mới trang====-->
+      <button class="button light" onclick="location.reload()">Làm mới</button>
+    </div>
+  </section>
+
+  <!--======================= THÊM MỚI SẢN PHẨM ==================-->
+  <section class="section main-section">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i></i></span>
+            THÔNG TIN CHÍNH
+          </p>
+        </header>
+        <div class="card-content">
+          <form>
+            <div class="field">
+              <label class="label">Hình ảnh</label>
+
+              <!--============TẢI ẢNH LÊN===========-->
+              <div class="field-body">
+                <div class="field file">
+                  <label class="upload control">
+                    <a class="button green">
+                      Tải lên
+                    </a>
+                    <input type="file">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <!--============ĐIỀN THÔNG TIN SẢN PHẨM MỚI ===========-->
+            <div class="field">
+              <label class="label">Tên</label> <!--Điền tên sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="field">
+              <label class="label">Giá</label> <!--Điền GIÁ sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="number" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="field">
+              <label class="label">Số lượng kho</label> <!--Điền SỐ LƯỢNG sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="number" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+            <!--Phân nhóm sản phẩm-->
+              <div class="field-body">
+                <div class="field">
+                  <label class="label">Phân nhóm sản phẩm</label>
+                  <div class="control">
+                    <div class="select">
+                      <select>
+                        <option value="da-mat">Molly</option>
+                        <option value="co-the">Blindbox Series</option>
+                        <option value="toc">Gấu bông</option>
+                      </select>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+             <!--=========NÚT THÊM MỚI==============-->
+             <div class="field">
+              <div class="control">
+                <button type="submit" class="button green">
+                  Thêm mới
+                </button>
+              </div>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+
+      <!--================CHƯƠNG TRÌNH KHUYẾN MÃI ===============-->
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i></i></span>
+            THÊM MÃ GIẢM GIÁ
+          </p>
+        </header>
+        <div class="card-content">
+          <form>
+            <div class="field">
+              <label class="label">Tên mã giảm giá</label> <!--Điền tên sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Nội dung giảm giá</label> <!--Điền GIÁ sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="number" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Thời gian giảm giá</label> <!--Điền SỐ LƯỢNG sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="number" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Phần trăm giảm giá</label> <!--Điền SỐ LƯỢNG sản phẩm mới-->
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="number" autocomplete="on" name="name" value="" class="input" required>
+                  </div>
+                  <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                </div>
+              </div>
+            </div>
+            <!--===============PHÂN NHÓM===============-->
+            <div class="field">
+              <label class="label">Phân nhóm sản phẩm giảm giá </label>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option value="da-mat">Molly</option>
+                    <option value="co-the">Blindbox Series</option>
+                    <option value="toc">Gấu bông</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+            <!--=========NÚT THÊM MỚI==============-->
+            <div class="field">
+              <div class="control">
+                <button type="submit" class="button green">
+                  Thêm mới
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--================END CHƯƠNG TRÌNH KHUYẾN MÃI ===============-->
+
+        <!--================THÊM NHÓM SẢN PHẨM ===============-->
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i></i></span>
+              THÊM NHÓM SẢN PHẨM
+            </p>
+          </header>
+          <div class="card-content">
+            <form>
+              <div class="field">
+                <label class="label">Tên nhóm sản phẩm</label> 
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control">
+                      <input type="text" autocomplete="on" name="name" value="" class="input" required>
+                    </div>
+                    <p class="help">Bắt buộc <span style="color: rgb(248, 7, 7);">*</span> </p>
+                  </div>
+                </div>
+              </div>
+  
+              <!--=========NÚT THÊM MỚI==============-->
+              <div class="field">
+                <div class="control">
+                  <button type="submit" class="button green">
+                    Thêm mới
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--================END THÊM NHÓM SẢN PHẨM ===============-->
+
+  </section>
+
+
+  <!-- Scripts below are for demo only -->
+  <script type="text/javascript" src="JS/QuanTri/main.min.js"></script>
+
+
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '658339141622648');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+</body>
+
+</html>

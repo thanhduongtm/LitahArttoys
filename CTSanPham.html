@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="IMAGE/logo_ngan.png" rel="shortcut icon"> <!--HÌNH SITE CỦA TRANG-->
+    <title>Chi Tiết Sản Phẩm</title>
+    <!--Link Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <!--Link icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--====== Vendor Css ======-->
+    <link rel="stylesheet" href="CSS/CTSanPham/vendor.css">
+    <!--Link css header-->
+    <link rel="stylesheet" href="CSS/header.css">
+    <!--Link css footer-->
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!--====== Utility-Spacing ======-->
+    <link rel="stylesheet" href="CSS/CTSanPham/utility.css">
+    <!--====== App ======-->
+    <link rel="stylesheet" href="CSS/CTSanPham/CTSP.css"> <!--CSS CHÍNH-->
+
+</head>
+
+<body class="config">
+
+        <!----------HEADER---------->
+    <section>
+        <header class="header">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMAGE/logo_ngan.png" width="100px" alt="Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" target="_self">TRANG CHỦ</a>
+                <a href="SanPham.html" target="_self">SẢN PHẨM</a>
+                <a href="SanPham.html" target="_self">PHỤ KIỆN</a>
+                <a href="LienHe.html" target="_self">LIÊN HỆ</a>
+                <a href="TaiKhoan.html" target="_self">TÀI KHOẢN </a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-bars" id="menu"></div>
+                <div class="fas fa-search" id="search"></div>
+                <a href="GioHang.html">
+                    <div class="fas fa-shopping-cart" id="cart"></div>
+                </a>
+                <div class="fas fa-user" id="login" onclick="showLoginOptions()"></div>
+            </div>
+
+            <!-- Mô-đun hiển thị lựa chọn đăng nhập -->
+            <div class="login-options" id="loginOptions">
+                <a href="DangNhap.html">ĐĂNG NHẬP</a>
+                <a href="DangKy.html">ĐĂNG KÝ</a>
+                <a href="QuanTri.html">QUẢN TRỊ</a>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </header>
+    </section>
+    <!----------END HEADER---------->
+
+        <!-- =============================================================================================== -->
+
+        <!--====== THÂN TRANG CHI TIẾT SẢN PHẨM ======-->
+
+            <!--====== PHẦN ĐẦU VỀ HÌNH ẢNH (TRÁI) VÀ NỘI DUNG NGẮN GỌN (PHẢI) CỦA SẢN PHẨM ======-->
+            <div class="u-s-p-t-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <!--====== HÌNH ẢNH SP (PHẦN NẰM BÊN TRÁI)======-->
+                            <div class="pd u-s-m-b-30">
+                                <div class="slider-fouc pd-wrap">
+
+                                    <div id="pd-o-initiate">
+                                        <div class="pd-o-img-wrap"
+                                            data-src="IMAGE/CTSanPham/product/mặt nạ đất sét k.jpg">
+                                            <img class="u-img-fluid" src="IMAGE/CTSanPham/1.jpg"
+                                                data-zoom-image="IMAGE/CTSanPham/1.jpg" alt="">
+                                        </div>
+
+                                        <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/2.jpg">
+                                            <img class="u-img-fluid" src="IMAGE/CTSanPham/2.jpg"
+                                                data-zoom-image="IMAGE/CTSanPham/2.jpg" alt="">
+                                        </div>
+
+                                        <div class="pd-o-img-wrap"
+                                            data-src="IMAGE/CTSanPham/3.jpg">
+                                            <img class="u-img-fluid" src="IMAGE/CTSanPham/3.jpg"
+                                                data-zoom-image="IMAGE/CTSanPham/3.jpg" alt="">
+                                        </div>
+
+                                        <div class="pd-o-img-wrap"
+                                            data-src="IMAGE/CTSanPham/4.jpg">
+                                            <img class="u-img-fluid" src="IMAGE/CTSanPham/4.jpg"
+                                                data-zoom-image="IMAGE/CTSanPham/4.jpg" alt="">
+                                        </div>
+
+                                        <div class="pd-o-img-wrap"
+                                            data-src="IMAGE/CTSanPham/5.jpg">
+                                            <img class="u-img-fluid" src="IMAGE/CTSanPham/5.jpg"
+                                                data-zoom-image="IMAGE/CTSanPham/5.jpg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <span class="pd-text">Nhấn vào ảnh để phóng to</span>
+                                </div>
+
+                                <div class="u-s-m-t-15">
+                                    <div class="slider-fouc">
+                                        <!--Hình thumbnail nhỏ bên dưới-->
+                                        <div id="pd-o-thumbnail">
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/1.jpg" alt="">
+                                            </div>
+
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/2.jpg" alt="">
+                                            </div>
+
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/3.jpg" alt="">
+                                            </div>
+
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/4.jpg" alt="">
+                                            </div>
+
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/5.jpg" alt="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--====== KẾT THÚC - HÌNH ẢNH SP (PHẦN NẰM BÊN TRÁI) ======-->
+
+                        </div>
+                        <div class="col-lg-7">
+
+                            <!--====== THÔNG TIN SP (PHẦN NẰM BÊN PHẢI) ======-->
+                            <div class="pd-detail">
+                                <div> <!--Tên sp-->
+                                    <span class="pd-detail__name">LABUBU HAVE A SEAT</span>
+                                </div>
+                                    <div class="pd-detail__inline"> <!--Giá sp-->
+
+                                        <span class="pd-detail__price">4.400.000<sup>đ</sup></span>
+                                        <!--thẻ DEL tạo đường gạch ngang giữa giá-->
+                                    </div>
+                                <div class="u-s-m-b-15"> <!--Đánh giá-->
+                                    <div class="pd-detail__rating gl-rating-style">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+
+                                        <span class="pd-detail__review u-s-m-l-4">
+                                            <a data-click-scroll="#view-review">2 đánh giá</a>
+                                            <!--Nhấn vào số lượt đánh giá sẽ chạy xuống phần đánh giá của sp-->
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-15"> <!--Tình trạng sp-->
+                                    <div class="pd-detail__inline">
+
+                                        <span class="pd-detail__stock">Còn hàng</span>
+
+                                        <span class="pd-detail__left">Đã bán 10</span>
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-15"> <!--Mô tả ngắn-->
+                                    <span class="pd-detail__preview-desc">Móc khoá gấu bông Labubu.</span>
+                                </div>
+
+                                <div class="u-s-m-b-15"> <!--Thêm vào yêu thích-->
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__click-wrap">
+                                            <i class="far fa-heart u-s-m-r-6"></i> <!--Ký hiệu trái tim của WISHLIST-->
+                                            <a href="#">Thêm vào yêu thích</a>
+                                            <span class="pd-detail__click-count">(10)</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="u-s-m-b-15"> <!--Chia sẻ sp qua MXH-->
+                                    <ul class="pd-social-list">
+                                        <li>
+                                            <p>Chia sẻ: </p>
+                                        </li>
+
+                                        <li>
+                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a class="s-tw--color-hover" href="#"><i
+                                                    class="fab fa-facebook-messenger"></i></a>
+                                        </li>
+
+                                        <li>
+                                            <a class="s-insta--color-hover" href="#"><i
+                                                    class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <form class="pd-detail__form">
+                                        <!--====== ĐIỀU CHỈNH SỐ LƯỢNG VÀ NÚT THÊM VÀO GIỎ - MUA NGAY ======-->
+                                        <div class="pd-detail-inline-2">
+                                            <div class="u-s-m-b-15">
+
+                                                <!--====== ĐIỀU CHỈNH SỐ LƯỢNG ======-->
+                                                <div class="input-counter">
+
+                                                    <span class="input-counter__minus fas fa-minus"></span>
+                                                    <!-- Nút giảm số lượng -->
+
+                                                    <input class="input-counter__text input-counter--text-primary-style"
+                                                        type="text" value="1" data-min="1" data-max="200">
+                                                    <!-- Ô nhập số lượng, có giá trị nhỏ nhất là 1 và lớn nhất là 200 -->
+
+                                                    <span class="input-counter__plus fas fa-plus"></span>
+                                                    <!-- Nút tăng số lượng -->
+
+                                                </div>
+                                                <!--====== KẾT THÚC - ĐIỀU CHỈNH SỐ LƯỢNG ======-->
+                                            </div>
+
+                                            <div class="u-s-m-b-15"> <!--====== NÚT THÊM VÀO GIỎ ======-->
+                                                <button class="btn btn--e-brand-b-2" type="submit">THÊM VÀO GIỎ</button>
+                                            </div>
+
+                                            <div class="u-s-m-b-15"> <!--====== MUA NGAY ======-->
+                                                <a href="ThanhToan.html" class="btn btn--e-brand-b-2">MUA NGAY</a>
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="u-s-m-b-15"> <!--Giao hàng đảm bảo-->
+                                    <span class="pd-detail__label u-s-m-b-8">Giao hàng đảm bảo:</span>
+
+                                    <ul class="pd-detail__policy-list">
+                                        <li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Đồng kiểm trước khi nhận hàng.</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                            <span>Thời gian giao hàng từ 2-4 ngày.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--====== KẾT THÚC - THÔNG TIN SP (PHẦN NẰM BÊN PHẢI) ======-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== KẾT THÚC - PHẦN ĐẦU VỀ HÌNH ẢNH (TRÁI) VÀ NỘI DUNG NGẮN GỌN (PHẢI) CỦA SẢN PHẨM ======-->
+
+
+            <!-- =============================================================================================== -->
+
+            <!--====== PHẦN MÔ TẢ - LƯU Ý KHI SỬ DỤNG - ĐÁNH GIÁ ======-->
+            <div class="u-s-p-y-90">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pd-tab">
+
+                                <!--TIÊU ĐỀ 3 MỤC MÔ TẢ - LƯU Ý KHI SỬ DỤNG - ĐÁNH GIÁ-->
+                                <div class="u-s-m-b-30">
+                                    <ul class="nav pd-tab__list">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#pd-desc">MÔ TẢ</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="view-review" data-toggle="tab"
+                                                href="#pd-rev">ĐÁNH GIÁ <span>(2)</span></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+
+                                    <!--====== NỘI DUNG PHẦN MÔ TẢ ======-->
+                                    <div class="tab-pane" id="pd-desc">
+                                        <div class="pd-tab__desc">
+                                            <div class="u-s-m-b-15">
+                                                <p>Pop Mart cho ra mắt sản phẩm mới với dòng Labubu ngồi cùng vớimàu sắc đa dạng,
+                                                     sự cải tiến của bộ lông ống ánh cùng với ram màu pastel chắc chắn là 1 sản phẩm không thể thiếu dành cho người yêu các bé Labubu của mùa hè này</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--====== KẾT THÚC - NỘI DUNG PHẦN MÔ TẢ ======-->
+
+                                    <!--====== NỘI DUNG PHẦN ĐÁNH GIÁ ======-->
+                                    <div class="tab-pane fade show active" id="pd-rev">
+                                        <div class="pd-tab__rev">
+                                            <div class="u-s-m-b-30">
+                                                <div class="pd-tab__rev-score">
+                                                    <div class="u-s-m-b-8">
+                                                        <h2>2 Đánh giá - 5.0</h2>
+                                                    </div>
+                                                    <div class="gl-rating-style-2 u-s-m-b-8">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+
+                                                    <div class="u-s-m-b-8">
+                                                        <h4>Bạn nghĩ gì về sản phẩm này?</h4>
+                                                    </div>
+
+                                                    <span class="gl-text">Chúng tôi muốn nghe đánh giá từ bạn!</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="u-s-m-b-30">
+                                                <form class="pd-tab__rev-f1">
+                                                    <div class="rev-f1__group">
+
+                                                        <div class="u-s-m-b-15">
+                                                            <h2>2 Khách Hàng Đã Đánh Giá</h2>
+                                                        </div>
+
+                                                        <div class="u-s-m-b-15"> <!--Lọc đánh giá-->
+                                                            <label for="sort-review"></label><select
+                                                                class="select-box select-box--primary-style"
+                                                                id="sort-review">
+                                                                <option selected>Lọc: Đánh giá cao nhất</option>
+                                                                <option>Lọc: Đánh giá thấp nhất</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="rev-f1__review">
+                                                        <div class="review-o u-s-m-b-15">
+                                                            <div class="review-o__info u-s-m-b-8">
+                                                                <!--Tên và ngày đánh giá của khách hàng 1-->
+                                                                <span class="review-o__name">Nguyễn Phương Anh</span>
+                                                                <span class="review-o__date">06/10/2024</span>
+                                                            </div>
+
+                                                            <div class="gl-rating-style-2 u-s-m-b-8">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                            </div>
+
+
+                                                            <p class="review-o__text">Gấu bông chất lượng, xinh và mềm cực kỳ luôn. </p>
+                                                        </div>
+
+                                                        <div class="review-o u-s-m-b-15">
+                                                            <div class="review-o__info u-s-m-b-8">
+                                                                <!--Tên và ngày đánh giá của khách hàng 2-->
+
+                                                                <span class="review-o__name">Lê Thị Thu Hiền</span>
+                                                                <span class="review-o__date">29/08/2024</span>
+
+                                                            </div>
+
+                                                            <div class="gl-rating-style-2 u-s-m-b-8">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                            </div>
+
+                                                            <p class="review-o__text">Trộm vía mua blindbox mở được em mình thích luôn ạ.
+                                                                Màu xinh xỉu, treo túi siêu dễ thương luôn.
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="u-s-m-b-30">
+                                                <form class="pd-tab__rev-f2">
+
+                                                    <h2 class="u-s-m-b-15">Viết đánh giá</h2>
+
+                                                    <span class="gl-text u-s-m-b-15">Điền đầy đủ thông tin khi viết đánh
+                                                        giá</span>
+
+                                                    <div class="u-s-m-b-30">
+                                                        <div class="rev-f2__table-wrap gl-scroll">
+                                                            <table class="rev-f2__table">
+                                                                <thead>
+                                                                    <!--====== TỪNG MỨC ĐÁNH GIÁ SAO PHẦN ĐÁNH GIÁ ======-->
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="gl-rating-style-2"><i
+                                                                                    class="fas fa-star"></i>
+
+                                                                                <span>(1)</span>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th>
+                                                                            <div class="gl-rating-style-2"><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i>
+
+                                                                                <span>(2)</span>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th>
+                                                                            <div class="gl-rating-style-2"><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i>
+
+                                                                                <span>(3)</span>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th>
+                                                                            <div class="gl-rating-style-2"><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i>
+
+                                                                                <span>(4)</span>
+                                                                            </div>
+                                                                        </th>
+                                                                        <th>
+                                                                            <div class="gl-rating-style-2"><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i><i
+                                                                                    class="fas fa-star"></i>
+
+                                                                                <span>(5)</span>
+                                                                            </div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr> <!--====== TICK ĐÁNH GIÁ SAO PHẦN ĐÁNH GIÁ ======-->
+                                                                        <td>
+                                                                            <!--====== Radio Box ======-->
+                                                                            <div class="radio-box">
+
+                                                                                <input type="radio" id="star-1"
+                                                                                    name="rating">
+                                                                                <div
+                                                                                    class="radio-box__state radio-box__state--primary">
+
+                                                                                    <label class="radio-box__label"
+                                                                                        for="star-1"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--====== End - Radio Box ======-->
+                                                                        </td>
+                                                                        <td>
+
+                                                                            <!--====== Radio Box ======-->
+                                                                            <div class="radio-box">
+
+                                                                                <input type="radio" id="star-2"
+                                                                                    name="rating">
+                                                                                <div
+                                                                                    class="radio-box__state radio-box__state--primary">
+
+                                                                                    <label class="radio-box__label"
+                                                                                        for="star-2"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--====== End - Radio Box ======-->
+                                                                        </td>
+                                                                        <td>
+
+                                                                            <!--====== Radio Box ======-->
+                                                                            <div class="radio-box">
+
+                                                                                <input type="radio" id="star-3"
+                                                                                    name="rating">
+                                                                                <div
+                                                                                    class="radio-box__state radio-box__state--primary">
+
+                                                                                    <label class="radio-box__label"
+                                                                                        for="star-3"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--====== End - Radio Box ======-->
+                                                                        </td>
+                                                                        <td>
+
+                                                                            <!--====== Radio Box ======-->
+                                                                            <div class="radio-box">
+
+                                                                                <input type="radio" id="star-4"
+                                                                                    name="rating">
+                                                                                <div
+                                                                                    class="radio-box__state radio-box__state--primary">
+
+                                                                                    <label class="radio-box__label"
+                                                                                        for="star-4"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--====== End - Radio Box ======-->
+                                                                        </td>
+                                                                        <td>
+
+                                                                            <!--====== Radio Box ======-->
+                                                                            <div class="radio-box">
+
+                                                                                <input type="radio" id="star-5"
+                                                                                    name="rating">
+                                                                                <div
+                                                                                    class="radio-box__state radio-box__state--primary">
+
+                                                                                    <label class="radio-box__label"
+                                                                                        for="star-5"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--====== End - Radio Box ======-->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="rev-f2__group">
+                                                        <div class="u-s-m-b-15"> <!--Ô điền nhận xét-->
+
+                                                            <label class="gl-label" for="reviewer-text">Nhận xét của bạn
+                                                            </label><textarea class="text-area text-area--primary-style"
+                                                                id="reviewer-text"></textarea>
+
+                                                        </div>
+
+                                                        <div>
+                                                            <p class="u-s-m-b-30"> <!--Ô điền tên-->
+
+                                                                <label class="gl-label" for="reviewer-name">Tên <span
+                                                                        style="color: red;">*</span></label>
+
+                                                                <input class="input-text input-text--primary-style"
+                                                                    type="text" id="reviewer-name">
+                                                            </p>
+
+                                                            <p class="u-s-m-b-30"> <!--Ô điền email-->
+
+                                                                <label class="gl-label" for="reviewer-email">Email <span
+                                                                        style="color: red;">*</span></label>
+
+                                                                <input class="input-text input-text--primary-style"
+                                                                    type="text" id="reviewer-email">
+                                                            </p>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div> <!--Nút gửi đánh giá-->
+                                                        <button class="btn btn--e-brand-shadow" type="submit">GỬI ĐÁNH
+                                                            GIÁ</button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--====== KẾT THÚC - NỘI DUNG PHẦN ĐÁNH GIÁ ======-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====== KẾT THÚC - PHẦN MÔ TẢ - LƯU Ý KHI SỬ DỤNG - ĐÁNH GIÁ ======-->
+
+            <!-- =============================================================================================== -->
+
+            <!--====== SẢN PHẨM MUA CÙNG ======-->
+            <div class="u-s-p-b-90">
+
+                <div class="section__intro u-s-m-b-46">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">SẢN PHẨM MUA CÙNG</h1>
+
+                                    <span class="section__span u-c-grey">Khám phá thêm các sản phẩm bảo vệ gấu cưng của bạn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== KẾT THÚC - TIÊU ĐỀ SẢN PHẨM MUA CÙNG ======-->
+
+
+                <!-- ====== NỘI DUNG SẢN PHẨM MUA CÙNG ====== -->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="slider-fouc"> <!--Container chứa toàn bộ slider-->
+                            <div class="owl-carousel product-slider" data-item="4">
+                                <!--Container của Owl Carousel, tạo slider hiển thị 4 sản phẩm mỗi lần-->
+
+                                <div class="u-s-m-b-30">
+                                    <!--Mỗi sản phẩm được đặt trong container này, với khoảng cách dưới cố định-->
+                                    <div class="product-o product-o--hover-on">
+                                        <!--Container định nghĩa mỗi sản phẩm và thêm hiệu ứng khi di chuột vào-->
+
+                                        <div class="product-o__wrap">
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="SanPham.html"> <!--THAY BẰNG LINK TRANG CHI TIẾT SP ĐÓ-->
+                                                <img class="aspect__img" src="IMAGE/ThanhToan/2.png" alt="">
+                                            </a>
+
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <!--ICON XEM NHANH - THÊM VÀO GIỎ - YÊU THÍCH - THÔNG BÁO VÀ TOOLTIP KHI ĐƯA CHUỘT VÀO ICON-->
+                                                    <li>
+                                                        <a data-modal="modal" data-modal-id="#quick-look-mc"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal" data-modal-id="#add-to-cart"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <span class="product-o__category"> <!--Danh mục sản phẩm-->
+                                            <a href="SanPham.html">Sản phẩm</a> <!--THAY BẰNG LINK TRANG SP-->
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">Túi bảo vệ</a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+
+                                            <span class="product-o__review">(5)</span>
+                                        </div>
+
+                                        <span class="product-o__price">20.000₫
+                                            <span class="product-o__discount">18.000₫</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap">
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="product-detail.html">
+
+                                                <img class="aspect__img" src="IMAGE/ThanhToan/1.png"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+
+                                                        <a data-modal="modal" data-modal-id="#quick-look-mc"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a data-modal="modal" data-modal-id="#add-to-cart"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+
+                                            <a href="SanPham.html">Sản phẩm</a></span>
+
+                                        <span class="product-o__name">
+
+                                            <a href="CTSanPham.html">Hộp trưng bày</a></span>
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="product-o__review">(10)</span>
+                                        </div>
+
+                                        <span class="product-o__price">200.000₫
+                                            <span class="product-o__discount">180.000₫</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap">
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="CTSanPham.html">
+
+                                                <img class="aspect__img" src="IMAGE/CTSanPham/6.jpeg"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+                                                        <a data-modal="modal" data-modal-id="#quick-look-mc"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal" data-modal-id="#add-to-cart"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+                                            <a href="SanPham.html">Sản phẩm</a>
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">Túi bảo vệ HCN </a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="product-o__review">(1)</span>
+                                        </div>
+
+                                        <span class="product-o__price">20.000₫
+                                            <span class="product-o__discount">18.000₫</span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== KẾT THÚC - NỘI DUNG SP LIÊN QUAN ======-->
+
+            </div>
+            <!--====== KẾT THÚC - SẢN PHẨM MUA CÙNG ======-->
+
+
+
+            <!-- =============================================================================================== -->
+            <!--====== SẢN PHẨM LIÊN QUAN ======-->
+            <div class="u-s-p-b-90">
+
+                <div class="section__intro u-s-m-b-46">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">SẢN PHẨM LIÊN QUAN</h1>
+
+                                    <span class="section__span u-c-grey">Có thể bạn sẽ thích!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== KẾT THÚC - TIÊU ĐỀ SP LIÊN QUAN ======-->
+
+
+                <!--====== NỘI DUNG SP LIÊN QUAN ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="slider-fouc"> <!--Container chứa toàn bộ slider-->
+                            <div class="owl-carousel product-slider" data-item="4">
+                                <!--Container của Owl Carousel, tạo slider hiển thị 4 sản phẩm mỗi lần-->
+
+                                <div class="u-s-m-b-30">
+                                    <!--Mỗi sản phẩm được đặt trong container này, với khoảng cách dưới cố định-->
+                                    <div class="product-o product-o--hover-on">
+                                        <!--Container định nghĩa mỗi sản phẩm và thêm hiệu ứng khi di chuột vào-->
+
+                                        <div class="product-o__wrap">
+                                            <!--Container chứa toàn bộ nội dung của INNISFREE-->
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="CTSanPham.html"> <!--THAY BẰNG LINK TRANG CHI TIẾT SP ĐÓ-->
+                                                <img class="aspect__img" src="IMAGE/TrangChu/8.png" alt="">
+                                            </a>
+
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <!--ICON XEM NHANH - THÊM VÀO GIỎ - YÊU THÍCH - THÔNG BÁO VÀ TOOLTIP KHI ĐƯA CHUỘT VÀO ICON-->
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#quick-look-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#add-to-cart-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <span class="product-o__category"> <!--Danh mục sản phẩm-->
+                                            <a href="SanPham.html">Sản phẩm</a> <!--THAY BẰNG LINK TRANG SP-->
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">PUCKY FOREST</a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="product-o__review">(8)</span>
+                                        </div>
+
+                                        <span class="product-o__price">3.500.000₫
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap"> <!--Container chứa toàn bộ nội dung của REP-->
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="CTSanPham.html">
+
+                                                <img class="aspect__img" src="IMAGE/TrangChu/15.png"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#quick-look-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#add-to-cart-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+                                                    <li>
+
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+
+                                            <a href="SanPham.html">Sản phẩm</a></span>
+
+                                        <span class="product-o__name">
+
+                                            <a href="CTSanPham.html">MR.PA ANIMALS
+                                            </a></span>
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="product-o__review">(5)</span>
+                                        </div>
+
+                                        <span class="product-o__price">1.300.000₫
+                                            <span class="product-o__discount">1.250.000₫</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap">
+                                            <!--Container chứa toàn bộ nội dung của SOME BY MI-->
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="product-detail.html">
+
+                                                <img class="aspect__img" src="IMAGE/TrangChu/7.png"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#quick-look-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#add-to-cart-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+                                            <a href="SanPham.html">Sản phẩm</a>
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">MÓC KHOÁ CIMMY</a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+
+                                            <span class="product-o__review">(1)</span>
+                                        </div>
+
+                                        <span class="product-o__price">500.000₫
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap">
+                                            <!--Container chứa toàn bộ nội dung của SKINTIFIC-->
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="CTSanPham.html">
+
+                                                <img class="aspect__img" src="IMAGE/TrangChu/18.png"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#quick-look-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#add-to-cart-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+                                            <a href="SanPham.html">Sản phẩm</a>
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">BAOAO CUDDLE</a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+
+                                            <span class="product-o__review">(6)</span>
+                                        </div>
+
+                                        <span class="product-o__price">2.500.000₫
+                                            <span class="product-o__discount">2.400.000₫</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-30">
+                                    <div class="product-o product-o--hover-on">
+                                        <div class="product-o__wrap">
+                                            <!--Container chứa toàn bộ nội dung của DR.CEURACLE-->
+
+                                            <a class="aspect aspect--bg-grey aspect--square u-d-block"
+                                                href="CTSanPham.html">
+
+                                                <img class="aspect__img" src="IMAGE/CTSanPham/product/Dr.Ceuracle.webp"
+                                                    alt=""></a>
+                                            <div class="product-o__action-wrap">
+                                                <ul class="product-o__action-list">
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#quick-look-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Xem nhanh"><i class="fas fa-search-plus"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a data-modal="modal-lq" data-modal-id-lq="#add-to-cart-lq"
+                                                            data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào giỏ"><i class="fas fa-plus-circle"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Thêm vào yêu thích"><i class="fas fa-heart"></i></a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" data-tooltip="tooltip" data-placement="top"
+                                                            title="Nhận thông báo về sản phẩm"><i
+                                                                class="fas fa-envelope"></i></a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
+                                        <span class="product-o__category">
+                                            <a href="SanPham.html">Sản phẩm </a>
+                                        </span>
+
+                                        <span class="product-o__name">
+                                            <a href="CTSanPham.html">Mặt Nạ Đất Sét Trà Xanh Dr.Ceuracle Jeju Matcha
+                                                Clay Pack 115g</a>
+                                        </span>
+
+                                        <div class="product-o__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="product-o__review">(10)</span>
+                                        </div>
+
+                                        <span class="product-o__price">449.000₫
+                                            <span class="product-o__discount">630,000₫</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- =======================================    POP-UP QUICK LOOK VÀ THÊM VÀO GIỎ HÀNG   ============================================ -->
+
+        <!--====== POP-UP QUICK LOOK VÀ THÊM VÀO GIỎ HÀNG SẢN PHẨM MUA CÙNG ======-->
+
+        <!--====== QUICK LOOK SẢN PHẨM MUA CÙNG ======-->
+        <div class="modal fade" id="quick-look-mc">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal--shadow">
+
+                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-5">
+
+                                <!--====== ĐƯỜNG DẪN: TRANG CHỦ - SẢN PHẨM - TÊN SP TRONG PHẦN QUICK LOOK SẢN PHẨM MUA CÙNG ======-->
+                                <div class="pd-breadcrumb u-s-m-b-30">
+                                    <ul class="pd-breadcrumb__list">
+                                        <li class="has-separator">
+                                            <a href="index.hml">Trang chủ</a>
+                                        </li>
+
+                                        <li class="has-separator">
+                                            <a href="SanPham.html">Sản phẩm</a>
+                                        </li>
+
+                                        <!--<li class="has-separator">
+                                            <a href="shop-side-version-2.html">DSLR Cameras</a></li> LÀM XONG HẾT THÌ XÓA CHỖ NÀY-->
+
+                                        <li class="is-marked">
+                                            <a href="CTSanPham.html">Bộ Dụng Cụ Trộn Đắp Mặt Nạ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--====== KẾT THÚC - ĐƯỜNG DẪN: TRANG CHỦ - SẢN PHẨM - TÊN SP TRONG PHẦN QUICK LOOK SẢN PHẨM MUA CÙNG ======-->
+
+
+                                <!--======================= CHI TIẾT SẢN PHẨM MUA CÙNG TRONG QUICK LOOK  ================================-->
+
+                                <!--====== HÌNH SẢN PHẨM MUA CÙNG TRONG PHẦN QUICK LOOK (PHẦN BÊN TRÁI)  ======-->
+                                <div class="pd u-s-m-b-30">
+                                    <div class="pd-wrap">
+                                        <div id="js-product-detail-modal"> <!--Hình SẢN PHẨM MUA CÙNG QUICK LOOK-->
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/set.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set.webp" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/set.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set1.webp" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/set.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set2.webp" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/set.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set3.webp" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/set.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set4.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="u-s-m-t-15">
+                                        <div id="js-product-detail-modal-thumbnail">
+                                            <!--Hình thumnail SẢN PHẨM MUA CÙNG QUICK LOOK -->
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set.webp" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set1.webp" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set2.webp" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set3.webp" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set4.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--====== KẾT THÚC - HÌNH SẢN PHẨM MUA CÙNG TRONG PHẦN QUICK LOOK (PHẦN BÊN TRÁI)  ======-->
+                            </div>
+
+                            <div class="col-lg-7">
+
+                                <!--====== THÔNG TIN SẢN PHẨM MUA CÙNG TRONG PHẦN QUICK LOOK (PHẦN NẰM BÊN PHẢI) ======-->
+                                <div class="pd-detail">
+                                    <div>
+                                        <span class="pd-detail__name">Bộ Dụng Cụ Trộn Đắp Mặt Nạ</span>
+                                    </div>
+
+                                    <div>
+                                        <div class="pd-detail__inline">
+                                            <span class="pd-detail__price">29.000₫</span>
+
+                                            <span class="pd-detail__discount">(-47%)</span>
+
+                                            <del class="pd-detail__del">55.000₫</del>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+                                        <div class="pd-detail__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="pd-detail__review u-s-m-l-4">
+                                                <a href="product-detail.html">5 đánh giá</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+                                        <div class="pd-detail__inline">
+
+                                            <span class="pd-detail__stock">Còn hàng</span>
+
+                                            <span class="pd-detail__left">Đã bán 8</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="u-s-m-b-15"> <!--Mô tả ngắn về SẢN PHẨM MUA CÙNG trong QUICK LOOK-->
+                                        <span class="pd-detail__preview-desc">Bộ Dụng Cụ Trộn Đắp Mặt Nạ Bằng Nhựa Cao
+                                            Cấp LMLTOP Mask Bowl là bộ dụng cụ đắp mặt nạ đến từ thương hiệu LMLTOP gồm
+                                            muỗng đong, bát trộn và cọ phết mặt nạ, cọ tán bột giúp công việc pha hỗn
+                                            hợp mặt nạ của bạn trở nên dễ dàng hơn.</span>
+                                    </div>
+
+                                    <div class="u-s-m-b-15">
+                                        <!--Thêm vào yêu thích SẢN PHẨM MUA CÙNG trong QUICK LOOK-->
+                                        <div class="pd-detail__inline">
+
+                                            <span class="pd-detail__click-wrap">
+
+                                                <i class="far fa-heart u-s-m-r-6"></i>
+                                                <a href="#">Thêm vào yêu thích</a>
+                                                <span class="pd-detail__click-count">(2)</span>
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="u-s-m-b-15"> <!--Chia sẻ qua MXH SẢN PHẨM MUA CÙNG trong QUICK LOOK-->
+                                        <ul class="pd-social-list">
+
+                                            <li>
+                                                <p>Chia sẻ: </p>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-fb--color-hover" href="#"><i
+                                                        class="fab fa-facebook-f"></i></a>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-tw--color-hover" href="#"><i
+                                                        class="fab fa-facebook-messenger"></i></a>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-insta--color-hover" href="#"><i
+                                                        class="fab fa-instagram"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="u-s-m-b-15">
+                                        <form class="pd-detail__form">
+                                            <div class="pd-detail-inline-2">
+                                                <!-- Phần chọn số lượng và các nút thêm vào giỏ, mua ngay của SẢN PHẨM MUA CÙNG trong QUICK LOOK -->
+                                                <div class="u-s-m-b-15">
+                                                    <!--Điều chỉnh số lượng SẢN PHẨM MUA CÙNG trong QUICK LOOK-->
+
+                                                    <!--====== ĐIỀU CHỈNH SỐ LƯỢNG SẢN PHẨM MUA CÙNG TRONG QUICK LOOK  ======-->
+                                                    <div class="input-counter">
+
+                                                        <span class="input-counter__minus fas fa-minus"></span>
+                                                        <!-- Nút giảm số lượng -->
+
+                                                        <input
+                                                            class="input-counter__text input-counter--text-primary-style"
+                                                            type="text" value="1" data-min="1" data-max="100">
+                                                        <!-- Ô nhập số lượng, có giá trị nhỏ nhất là 1 và lớn nhất là 100 -->
+
+                                                        <span class="input-counter__plus fas fa-plus"></span>
+                                                        <!-- Nút tăng số lượng -->
+
+                                                    </div>
+                                                    <!--====== KẾT THÚC - ĐIỀU CHỈNH SỐ LƯỢNG SẢN PHẨM MUA CÙNG TRONG QUICK LOOK  ======-->
+                                                </div>
+
+                                                <div class="u-s-m-b-15">
+                                                    <!--Nút Thêm vào giỏ và nút Mua ngay SẢN PHẨM MUA CÙNG trong QUICK LOOK-->
+                                                    <button class="btn btn--e-brand-b-2" type="submit">THÊM VÀO
+                                                        GIỎ</button> <br> <br> <br>
+                                                    <div class="u-s-m-b-15"> <!--====== MUA NGAY ======-->
+                                                        <a href="ThanhToan.html" class="btn btn--e-brand-b-2">MUA
+                                                            NGAY</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="u-s-m-b-15">
+
+                                        <span class="pd-detail__label u-s-m-b-8">Giao hàng đảm bảo:</span>
+                                        <ul class="pd-detail__policy-list">
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Freeship cho đơn hàng từ 500k.</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Đồng kiểm trước khi nhận hàng.</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Thời gian giao hàng 2-4 ngày.</span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!--====== KẾT THÚC - THÔNG TIN SẢN PHẨM MUA CÙNG TRONG PHẦN QUICK LOOK (PHẦN NẰM BÊN PHẢI) ======-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--====== KẾT THÚC - QUICK LOOK SẢN PHẨM MUA CÙNG ======-->
+
+
+        <!--====== THÊM VÀO GIỎ HÀNG TRONG SẢN PHẨM MUA CÙNG ======-->
+        <div class="modal fade" id="add-to-cart">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-radius modal-shadow">
+
+                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="success u-s-m-b-30">
+                                    <!--Thông tin của SẢN PHẨM MUA CÙNG khi chọn thêm vào giỏ (PHẦN BÊN TRÁI)-->
+                                    <div class="success__text-wrap">
+                                        <!--Thông báo sp đã thêm vào giỏ hàng thành công trong SẢN PHẨM MUA CÙNG-->
+
+                                        <i class="fas fa-check"></i>
+                                        <!--Dấu tick trước Đã thêm vào giỏ hàng! trong SẢN PHẨM MUA CÙNG-->
+
+                                        <span>Đã thêm vào giỏ hàng!</span>
+                                    </div>
+
+                                    <div class="success__img-wrap">
+                                        <!--Hình đại diện của SẢN PHẨM MUA CÙNG khi chọn thêm vào giỏ-->
+                                        <img class="u-img-fluid" src="IMAGE/CTSanPham/product/set.webp" alt="">
+                                    </div>
+
+                                    <div class="success__info-wrap">
+                                        <!--Tên - Số lượng - Giá của SẢN PHẨM MUA CÙNG khi chọn thêm vào giỏ-->
+
+                                        <span class="success__name">Bộ Dụng Cụ Trộn Đắp Mặt Nạ</span>
+
+                                        <span class="success__quantity">Số lượng: 1</span>
+
+                                        <span class="success__price">29.000đ</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="s-option">
+                                    <!--Thông tin của SẢN PHẨM MUA CÙNG khi chọn thêm vào giỏ (PHẦN BÊN PHẢI)-->
+
+
+                                    <div class="s-option__link-box">
+
+                                        <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP
+                                            TỤC MUA SẮM</a>
+
+                                        <a class="s-option__link btn--e-white-brand-shadow" href="GioHang.html">XEM GIỎ
+                                            HÀNG</a>
+
+                                        <a class="s-option__link btn--e-brand-shadow" href="ThanhToan.html">TIẾN HÀNH
+                                            THANH TOÁN</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== KẾT THÚC - THÊM VÀO GIỎ HÀNG TRONG SẢN PHẨM MUA CÙNG ======-->
+
+        <!--====== KẾT THÚC - POP-UP QUICK LOOK VÀ THÊM VÀO GIỎ HÀNG SẢN PHẨM MUA CÙNG ======-->
+
+
+        <!--====== QUICK LOOK SẢN PHẨM LIÊN QUAN - INNISFREE ======-->
+        <div class="modal fade" id="quick-look-lq">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal--shadow">
+
+                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-5">
+
+                                <!--====== ĐƯỜNG DẪN: TRANG CHỦ - SẢN PHẨM - TÊN SP TRONG PHẦN QUICK LOOK ======-->
+                                <div class="pd-breadcrumb u-s-m-b-30">
+                                    <ul class="pd-breadcrumb__list">
+                                        <li class="has-separator">
+                                            <a href="index.hml">Trang chủ</a>
+                                        </li>
+
+                                        <li class="has-separator">
+                                            <a href="SanPham.html">Sản phẩm</a>
+                                        </li>
+
+                                        <li class="is-marked">
+                                            <a href="CTSanPham.html">Mặt Nạ Đất Sét Innisfree Chăm Sóc Lỗ Chân Lông Từ
+                                                Đá Tro Núi Lửa 100ml</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--====== KẾT THÚC - ĐƯỜNG DẪN: TRANG CHỦ - SẢN PHẨM - TÊN SP TRONG PHẦN QUICK LOOK ======-->
+
+
+                                <!--====== CHI TIẾT SP TRONG QUICK LOOK ======-->
+                                <!--====== HÌNH SP TRONG PHẦN QUICK LOOK (PHẦN BÊN TRÁI) ======-->
+                                <div class="pd-lq u-s-m-b-30">
+                                    <div class="pd-wrap-lq">
+                                        <div id="js-product-detail-modal-lq"> <!--Hình sp Innisfree QUICK LOOK-->
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/inni.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni.webp" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/inni-o-n.jpg">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni-o-n.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/inni1.jpg">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni1.jpg" alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/inni2.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni2.webp"
+                                                    alt="">
+                                            </div>
+                                            <div class="pd-o-img-wrap" data-src="IMAGE/CTSanPham/product/inni3.webp">
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni3.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="u-s-m-t-15">
+                                        <div id="js-product-detail-modal-thumbnail-lq">
+                                            <!--Hình thumnail QUICK LOOK Innisfree-->
+                                            <div>
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni.webp" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni-o-n.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni1.jpg" alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni2.webp"
+                                                    alt="">
+                                            </div>
+                                            <div>
+
+                                                <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni3.webp"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--====== KẾT THÚC - HÌNH SP TRONG PHẦN QUICK LOOK (PHẦN BÊN TRÁI) ======-->
+                            </div>
+
+                            <div class="col-lg-7">
+
+                                <!--====== THÔNG TIN SP INNISFREE TRONG PHẦN QUICK LOOK (PHẦN NẰM BÊN PHẢI) ======-->
+                                <div class="pd-detail">
+                                    <div>
+                                        <span class="pd-detail__name">Mặt Nạ Đất Sét Innisfree Chăm Sóc Lỗ Chân Lông Từ
+                                            Đá Tro Núi Lửa 100ml</span>
+                                    </div>
+
+                                    <div>
+                                        <div class="pd-detail__inline">
+                                            <span class="pd-detail__price">324.000₫</span>
+
+                                            <span class="pd-detail__discount">(-10%)</span>
+
+                                            <del class="pd-detail__del">360.000₫</del>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+                                        <div class="pd-detail__rating gl-rating-style">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+
+                                            <span class="pd-detail__review u-s-m-l-4">
+                                                <a href="product-detail.html">8 đánh giá</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+                                        <div class="pd-detail__inline">
+
+                                            <span class="pd-detail__stock">Còn hàng</span>
+
+                                            <span class="pd-detail__left">Đã bán 10</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="u-s-m-b-15"> <!--Mô tả ngắn về sp Innisfree trong QUICK LOOK-->
+                                        <span class="pd-detail__preview-desc">Làm sạch tế bào chết, làm sạch bã nhờn,
+                                            dầu thừa, làm sạch sâu và cải thiện vấn đề về lỗ chân lông, hỗ trợ làm sáng
+                                            da và cải thiện độ đàn hồi da.</span>
+                                    </div>
+
+                                    <div class="u-s-m-b-15"> <!--Thêm vào yêu thích sp Innisfree trong QUICK LOOK-->
+                                        <div class="pd-detail__inline">
+
+                                            <span class="pd-detail__click-wrap">
+
+                                                <i class="far fa-heart u-s-m-r-6"></i>
+                                                <a href="#">Thêm vào yêu thích</a>
+                                                <span class="pd-detail__click-count">(5)</span>
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="u-s-m-b-15"> <!--Chia sẻ qua MXH sp Innisfree trong QUICK LOOK-->
+                                        <ul class="pd-social-list">
+
+                                            <li>
+                                                <p>Chia sẻ: </p>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-fb--color-hover" href="#"><i
+                                                        class="fab fa-facebook-f"></i></a>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-tw--color-hover" href="#"><i
+                                                        class="fab fa-facebook-messenger"></i></a>
+                                            </li>
+
+                                            <li>
+                                                <a class="s-insta--color-hover" href="#"><i
+                                                        class="fab fa-instagram"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="u-s-m-b-15">
+                                        <form class="pd-detail__form">
+                                            <div class="pd-detail-inline-2">
+                                                <!-- Phần chọn số lượng và các nút thêm vào giỏ, mua ngay của sp Innisfree trong QUICK LOOK -->
+                                                <div class="u-s-m-b-15">
+                                                    <!--Điều chỉnh số lượng sp Innisfree trong QUICK LOOK-->
+
+                                                    <!--====== ĐIỀU CHỈNH SỐ LƯỢNG TRONG QUICK LOOK ======-->
+                                                    <div class="input-counter">
+
+                                                        <span class="input-counter__minus fas fa-minus"></span>
+                                                        <!-- Nút giảm số lượng -->
+
+                                                        <input
+                                                            class="input-counter__text input-counter--text-primary-style"
+                                                            type="text" value="1" data-min="1" data-max="100">
+                                                        <!-- Ô nhập số lượng, có giá trị nhỏ nhất là 1 và lớn nhất là 100 -->
+
+                                                        <span class="input-counter__plus fas fa-plus"></span>
+                                                        <!-- Nút tăng số lượng -->
+
+                                                    </div>
+                                                    <!--====== KẾT THÚC - ĐIỀU CHỈNH SỐ LƯỢNG TRONG QUICK LOOK ======-->
+                                                </div>
+
+                                                <div class="u-s-m-b-15">
+                                                    <!--Nút Thêm vào giỏ và nút Mua ngay sp Innisfree trong QUICK LOOK-->
+                                                    <button class="btn btn--e-brand-b-2" type="submit">THÊM VÀO
+                                                        GIỎ</button> <br> <br> <br>
+                                                    <div class="u-s-m-b-15"> <!--====== MUA NGAY ======-->
+                                                        <a href="ThanhToan.html" class="btn btn--e-brand-b-2">MUA
+                                                            NGAY</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="u-s-m-b-15">
+
+                                        <span class="pd-detail__label u-s-m-b-8">Giao hàng đảm bảo:</span>
+                                        <ul class="pd-detail__policy-list">
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Freeship cho đơn hàng từ 500k.</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Đồng kiểm trước khi nhận hàng.</span>
+                                            </li>
+
+                                            <li>
+                                                <i class="fas fa-check-circle u-s-m-r-8"></i>
+                                                <span>Thời gian giao hàng 2-4 ngày.</span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!--====== KẾT THÚC - THÔNG TIN SP INNISFREE TRONG PHẦN QUICK LOOK (PHẦN NẰM BÊN PHẢI) ======-->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--====== KẾT THÚC - QUICK LOOK SẢN PHẨM LIÊN QUAN - INNISFREE ======-->
+
+
+        <!--====== THÊM VÀO GIỎ HÀNG TRONG SP LIÊN QUAN - INNISFREE ======-->
+        <div class="modal fade" id="add-to-cart-lq">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-radius modal-shadow">
+
+                    <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="success-lq u-s-m-b-30">
+                                    <!--Thông tin của sp Innisfree khi chọn thêm vào giỏ (PHẦN BÊN TRÁI)-->
+                                    <div class="success__text-wrap"> <!--Thông báo sp đã thêm vào giỏ hàng thành công-->
+
+                                        <i class="fas fa-check"></i> <!--Dấu tick trước Đã thêm vào giỏ hàng!-->
+
+                                        <span>Đã thêm vào giỏ hàng!</span>
+                                    </div>
+
+                                    <div class="success__img-wrap">
+                                        <!--Hình đại diện của sp Innisfree khi chọn thêm vào giỏ-->
+                                        <img class="u-img-fluid" src="IMAGE/CTSanPham/product/inni.webp" alt="">
+                                    </div>
+
+                                    <div class="success__info-wrap">
+                                        <!--Tên - Số lượng - Giá của sp Innisfree khi chọn thêm vào giỏ-->
+
+                                        <span class="success__name">Mặt Nạ Đất Sét Chăm Sóc Lỗ Chân Lông Từ Đá Tro Núi
+                                            Lửa Innisfree Super Volcanic Pore Clay Mask 100ml</span>
+
+                                        <span class="success__quantity">Số lượng: 1</span>
+
+                                        <span class="success__price">324.000đ</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="s-option">
+                                    <!--Thông tin của sp Innisfree khi chọn thêm vào giỏ (PHẦN BÊN PHẢI)-->
+
+                                    <div class="s-option__link-box">
+
+                                        <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal-lq">TIẾP
+                                            TỤC MUA SẮM</a>
+
+                                        <a class="s-option__link btn--e-white-brand-shadow" href="GioHang.html">XEM GIỎ
+                                            HÀNG</a>
+
+                                        <a class="s-option__link btn--e-brand-shadow" href="ThanhToan.html">TIẾN HÀNH
+                                            THANH TOÁN</a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== KẾT THÚC - THÊM VÀO GIỎ HÀNG TRONG SP LIÊN QUAN - INNISFREE ======-->
+
+        <!--====== KẾT THÚC - POP-UP QUICK LOOK VÀ THÊM VÀO GIỎ HÀNG SẢN PHẨM LIÊN QUAN ======-->
+
+    <!--====== KẾT THÚC - Main App ======-->
+            <!--====== FOOTER ======-->
+       <footer class="footer">
+           <div class="blockf">
+               <!--LOGO-->
+               <img width="100" src="IMAGE/logo.png" alt="Logo">
+               <p>Litah Arttoys - Mang đến cho khách hàng những sản phẩm độc đáo và chất lượng.
+               </p>
+           </div>
+           <div class="blockf"> <!--LIÊN HỆ-->
+               <h3> LIÊN HỆ </h3> <br>
+               <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"> <i class="fas fa-map"></i> 86 Tản
+                   Đà, Phường 11, Quận 5, Tp.HCM </a>
+               <a href="tel:0888 028 028"><i class="fas fa-phone"></i> 0888 028 028</a>
+               <a href=mailto:litaharttoys@gmail.com"><i class="fas fa-envelope"></i> litaharttoys@gmail.com</a>
+           </div>
+           <div class="blockf"> <!--CHÍNH SÁCH-->
+               <h3> CHÍNH SÁCH </h3> <br>
+               <a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a>
+               <a href="#"><i class="fas fa-chevron-right"></i> Chính sách mua hàng</a>
+               <a href="#"><i class="fas fa-chevron-right"></i> Chương trình khuyến mãi</a>
+           </div>
+       </footer>
+       <!--====== KẾT THÚC - FOOTER ======-->
+
+
+</body>
+  <!--====== Vendor Js ======-->
+  <script src="JS/CTSanPham/vendor.js"></script>
+
+  <!--====== jQuery Shopnav plugin ======-->
+  <script src="JS/CTSanPham/jquery.shopnav.js"></script>
+
+  <!--====== App ======-->
+  <script src="JS/CTSanPham/app.js"></script>
+
+  <script src="JS/header.js"></script>
+  <script src="JS/script.js"></script>
+
+</html>
+
+

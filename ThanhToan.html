@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Thanh Toán</title>
+    <!--Link icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--Link Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <!--Link css header-->
+    <link rel="stylesheet" href="CSS/header.css">
+    <!--Link css footer-->
+    <link rel="stylesheet" href="CSS/footer.css">
+    <!--Link Vendor Css-->
+    <link rel="stylesheet" href="CSS/ThanhToan/vendor.css">
+    <!--Link khoảng cách css-->
+    <link rel="stylesheet" href="CSS/utility.css">
+    <!--Link ccs-->
+    <link rel="stylesheet" href="CSS/ThanhToan/ThanhToan.css">
+
+</head>
+
+<body>
+       <!----------HEADER---------->
+    <section>
+        <header class="header">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMAGE/logo_ngan.png" width="100px" alt="Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" target="_self">TRANG CHỦ</a>
+                <a href="SanPham.html" target="_self">SẢN PHẨM</a>
+                <a href="SanPham.html" target="_self">PHỤ KIỆN</a>
+                <a href="LienHe.html" target="_self">LIÊN HỆ</a>
+                <a href="TaiKhoan.html" target="_self">TÀI KHOẢN </a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-bars" id="menu"></div>
+                <div class="fas fa-search" id="search"></div>
+                <a href="GioHang.html">
+                    <div class="fas fa-shopping-cart" id="cart"></div>
+                </a>
+                <div class="fas fa-user" id="login" onclick="showLoginOptions()"></div>
+            </div>
+
+            <!-- Mô-đun hiển thị lựa chọn đăng nhập -->
+            <div class="login-options" id="loginOptions">
+                <a href="DangNhap.html">ĐĂNG NHẬP</a>
+                <a href="DangKy.html">ĐĂNG KÝ</a>
+                <a href="QuanTri.html">QUẢN TRỊ</a>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </header>
+    </section>
+    <!----------END HEADER---------->
+
+    <!----------SECTION 1---------->
+    <h2> THANH TOÁN </h2>
+    <div class="u-s-p-y-60">
+        <!----------MÃ GIẢM GIÁ---------->
+        <div class="section__content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="checkout-msg-group">
+                        <!--BOX MÃ GIẢM GIÁ-->
+                        <div class="msg">
+                            <span class="msg__text">
+                                Nhập mã "LITAHHLW10%" để được giảm 10% cho mọi đơn hàng. <br>                                <a class="gl-link" href="#have-coupon" data-toggle="collapse">Nhấn vào để nhập mã
+                                    giảm giá</a></span>
+                            <div class="collapse" id="have-coupon" data-parent="#checkout-msg-group">
+                                <div class="c-f u-s-m-b-16">
+                                    <!--Hướng dẫn nhập mã giảm giá-->
+                                    <span class="gl-text u-s-m-b-16">Nhập mã giảm giá vào đây</span>
+                                    <form class="c-f__form">
+                                        <div class="u-s-m-b-16">
+                                            <div class="u-s-m-b-15">
+                                                <input class="input-text input-text--primary-style" type="text"
+                                                    id="coupon" placeholder="Mã giảm giá">
+                                            </div>
+                                            <div class="u-s-m-b-15">
+
+                                                <button class="btn btn--e-transparent-brand-b-2"
+                                                    type="submit">Áp dụng</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END BOX MÃ GIẢM GIÁ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------- END ĐĂNG NHẬP, ĐĂNG KÝ VÀ MÃ GIẢM GIÁ -------->
+
+    <!----------SECTION 2---------->
+    <div class="u-s-p-b-60">
+
+        <!----------THÔNG TIN GIAO HÀNG-->
+        <div class="section__content">
+            <div class="container">
+                <div class="checkout-f">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="checkout-f__h1">THÔNG TIN GIAO HÀNG</h1>
+                            <form class="checkout-f__delivery">
+                                <div class="u-s-m-b-30">
+                                    <div class="u-s-m-b-15">
+
+                                        <!--====== Check Box ======-->
+                                        <div class="check-box">
+
+                                            <input type="checkbox" id="get-address">
+                                            <div class="check-box__state check-box__state--primary">
+
+                                                <label class="check-box__label" for="get-address">Sử dụng địa chỉ
+                                                    giao hàng và địa chỉ thanh toán mặc định từ tài khoản</label>
+                                            </div>
+                                        </div>
+                                        <!--====== End - Check Box ======-->
+                                    </div>
+
+                                    <!--====== HỌ TÊN ======-->
+                                    <div class="gl-inline">
+                                        <div class="u-s-m-b-15">
+
+                                            <label class="gl-label" for="billing-fname">HỌ TÊN *</label>
+
+                                            <input class="input-text input-text--primary-style" type="text"
+                                                id="billing-fname" data-bill="">
+                                        </div>
+                                    </div>
+                                    <!--====== END - HỌ TÊN ======-->
+                                    <!--====== E-MAIL ======-->
+                                    <div class="u-s-m-b-15">
+                                        <label class="gl-label" for="billing-email">E-MAIL *</label>
+                                        <input class="input-text input-text--primary-style" type="text"
+                                            id="billing-email" data-bill="">
+                                    </div>
+                                    <!--====== END - E-MAIL ======-->
+                                    <!--====== SỐ ĐIỆN THOẠI ======-->
+                                    <div class="u-s-m-b-15">
+                                        <label class="gl-label" for="billing-phone">SỐ ĐIỆN THỌAI *</label>
+                                        <input class="input-text input-text--primary-style" type="text"
+                                            id="billing-phone" data-bill="">
+                                    </div>
+                                    <!--====== End - SỐ ĐIỆN THOẠI ======-->
+                                    <!--====== ĐỊA CHỈ ======-->
+                                    <div class="u-s-m-b-15">
+
+                                        <label class="gl-label" for="billing-street">ĐỊA CHỈ *</label>
+
+                                        <input class="input-text input-text--primary-style" type="text"
+                                            id="billing-street" placeholder="Nhập địa chỉ cụ thể" data-bill="">
+                                    </div>
+                                    <!--====== END - ĐỊA CHỈ ======-->
+                                    <!--====== THÀNH PHỐ ======-->
+                                    <div class="u-s-m-b-15">
+                                        <!--====== Select Box ======-->
+                                        <label class="gl-label" for="billing-country">THÀNH PHỐ *</label><select
+                                            class="select-box select-box--primary-style" id="billing-country"
+                                            data-bill="">
+                                            <!--Nhập đại diện vài tỉnh thành ạ-->
+                                            <option selected value="">Chọn thành phố</option>
+                                            <option value="HCM">TP.Hồ Chí Minh</option>
+                                            <option value="HN">Hà Nội</option>
+                                            <option value="ĐN">Đà Nẵng</option>
+                                            <option value="HUE">Huế</option>
+                                            <option value="ĐNAI">Đồng Nai</option>
+                                            <option value="BN">Bắc Ninh</option>
+                                        </select>
+                                        <!--====== End - Select Box ======-->
+                                    </div>
+                                    <!--====== End - THÀNH PHỐ ======-->
+                                    <div class="u-s-m-b-10">
+                                        <label class="gl-label" for="order-note">GHI CHÚ</label><textarea
+                                            class="text-area text-area--primary-style" id="order-note"></textarea>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn--e-transparent-brand-b-2" type="submit">LƯU</button>
+                                    </div>
+                                    <!----------SẢN PHẨM MUA CÙNG---------->
+                                    <h1 class="checkout-f__h1">THƯỜNG ĐƯỢC MUA CÙNG...</h1>
+                                    <section class="feature" class="section1">
+                                        <!--Sản phẩm 1-->
+                                        <div class="pro">
+                                            <img src="IMAGE/ThanhToan/1.png" alt="">
+                                            <h5>Hộp trưng bày</h5>
+                                            <ul>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="used">(525)</i></li>
+                                            </ul>
+                                            <h4 class="price">
+                                                <span class="discount-price">200.000đ</span>
+                                                <span class="discounted">180.000đ</span>
+                                            </h4>
+                                            <button class="buy-now-button">Thêm vào giỏ</button>
+                                        </div>
+                                        <!--Sản phẩm 2-->
+                                        <div class="pro">
+                                            <img src="IMAGE/ThanhToan/2.png" alt="">
+                                            <h5>Túi bảo vệ</h5>
+                                            <ul>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="fa fa-star checked"></i></li>
+                                                <li><i class="used">(245)</i></li>
+                                            </ul>
+                                            <h4 class="price">
+                                                <span class="discount-price">20.000đ</span>
+                                                <span class="discounted">18.000đ</span>
+                                            </h4>
+                                            <button class="buy-now-button">Thêm vào giỏ</button>
+                                        </div>
+                                    </section>
+                                    <!----------END SẢN PHẨM MUA CÙNG---------->
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <h1 class="checkout-f__h1">GIỎ HÀNG</h1>
+
+                            <!--Danh sách giỏ hàng-->
+                            <div class="o-summary">
+                                <div class="o-summary__section u-s-m-b-30">
+                                    <div class="o-summary__item-wrap gl-scroll">
+                                        <!--Sản phẩm 1-->
+                                        <div class="o-card">
+                                            <div class="o-card__flex">
+                                                <div class="o-card__img-wrap">
+                                                    <img class="u-img-fluid" src="IMAGE/TrangChu/15.png" alt="sp1">
+                                                </div>
+                                                <div class="o-card__info-wrap">
+                                                    <span class="o-card__name">
+                                                        <a href="CTSanPham.html">MR.PA ANIMALS</a>
+                                                    </span>
+
+                                                    <div class="o-card__quantity">
+                                                        <label for="quantity1">Số lượng</label>
+                                                        <input type="number" id="quantity1" name="quantity1" value="1"
+                                                            min="1">
+                                                    </div>
+                                                    <span class="o-card__price">1.300.000đ</span>
+                                                </div>
+                                            </div>
+                                            <a class="o-card__del far fa-trash-alt"></a>
+                                        </div>
+                                        <!--Sản phẩm 2-->
+                                        <div class="o-card">
+                                            <div class="o-card__flex">
+                                                <div class="o-card__img-wrap">
+                                                    <img class="u-img-fluid" src="IMAGE/TrangChu/9.png" alt="sp2">
+                                                </div>
+                                                <div class="o-card__info-wrap">
+                                                    <span class="o-card__name">
+                                                        <a href="CTSanPham.html">GẤU BÔNG PIMOMO</a>
+                                                    </span>
+
+                                                    <div class="o-card__quantity">
+                                                        <label for="quantity1">Số lượng</label>
+                                                        <input type="number" id="quantity1" name="quantity1" value="1"
+                                                            min="1">
+                                                    </div>
+                                                    <span class="o-card__price">1.200.000đ</span>
+                                                </div>
+                                            </div>
+                                            <a class="o-card__del far fa-trash-alt"></a>
+                                        </div>
+                                        <!--Sản phẩm 3-->
+                                        <div class="o-card">
+                                            <div class="o-card__flex">
+                                                <div class="o-card__img-wrap">
+                                                    <img class="u-img-fluid" src="IMAGE/TrangChu/16.png" alt="sp3">
+                                                </div>
+                                                <div class="o-card__info-wrap">
+                                                    <span class="o-card__name">
+                                                        <a href="CTSanPham.html">MIGO</a>
+                                                    </span>
+
+                                                    <div class="o-card__quantity">
+                                                        <label for="quantity1">Số lượng</label>
+                                                        <input type="number" id="quantity1" name="quantity1" value="1"
+                                                            min="1">
+                                                    </div>
+                                                    <span class="o-card__price">1.500.000đ</span>
+                                                </div>
+                                            </div>
+                                            <a class="o-card__del far fa-trash-alt"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Địa chỉ mặc định-->
+                                <div class="o-summary__section u-s-m-b-30">
+                                    <div class="o-summary__box">
+                                        <h1 class="checkout-f__h1">ĐỊA CHỈ GIAO HÀNG VÀ THANH TOÁN MẶC ĐỊNH</h1>
+                                        <div class="ship-b">
+
+                                            <span class="ship-b__text">Giao hàng đến:</span>
+                                            <div class="ship-b__box u-s-m-b-10">
+                                                <p class="ship-b__p">
+                                                    Dương Thị Mỹ Thanh <br>
+                                                    86 Tản Đà, Phường 5, Quận 5, Tp.Hồ Chí Minh <br>
+                                                    (+84) 868959902</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Tính giá trị đơn hàng-->
+                                <div class="o-summary__section u-s-m-b-30">
+                                    <div class="o-summary__box">
+                                        <table class="o-summary__table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>TỔNG ĐƠN HÀNG</td>
+                                                    <td>4.000.000đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PHÍ GIAO HÀNG</td>
+                                                    <td>30.000đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GIẢM GIÁ</td>
+                                                    <td>10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TỔNG THANH TOÁN</td>
+                                                    <td>3.630.000đ</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="o-summary__section u-s-m-b-30">
+                                    <div class="o-summary__box">
+                                        <h1 class="checkout-f__h1">THÔNG TIN THANH TOÁN</h1>
+                                        <form class="checkout-f__payment">
+                                            <div class="u-s-m-b-10">
+
+                                                <!--Lựa chọn phương thức thanh toán-->
+                                                <div class="radio-box">
+
+                                                    <input type="radio" id="cash-on-delivery" name="payment">
+                                                    <div class="radio-box__state radio-box__state--primary">
+                                                        <!--Thanh toán khi nhận hàng-->
+                                                        <label class="radio-box__label" for="cash-on-delivery">Thanh
+                                                            toán khi nhận hàng</label>
+                                                    </div>
+                                                </div>
+                                                <span class="gl-text u-s-m-t-6">Thanh toán bằng tiền mặt khi nhận
+                                                    hàng.</span>
+                                            </div>
+                                            <div class="u-s-m-b-10">
+
+                                                <div class="radio-box">
+
+                                                    <input type="radio" id="direct-bank-transfer" name="payment">
+                                                    <div class="radio-box__state radio-box__state--primary">
+                                                        <!--Thanh toán chuyển khoản-->
+                                                        <label class="radio-box__label"
+                                                            for="direct-bank-transfer">Thanh toán qua ví điện tử</label>
+                                                    </div>
+                                                </div>
+
+                                                <span class="gl-text u-s-m-t-6">Thực hiện thanh toán trực tiếp bằng cách quét
+                                                    mã QR bằng ví điện tử. Vui lòng sử dụng ID đơn hàng
+                                                    của bạn làm nội dung chuyển khoản. Đơn đặt hàng của bạn sẽ không
+                                                    được vận chuyển cho đến khi giao dịch thành công và
+                                                    được xác nhận.</span>
+                                            </div>
+                                            <div class="u-s-m-b-10">
+
+                                                <div class="radio-box">
+
+                                                    <input type="radio" id="pay-with-card" name="payment">
+                                                    <div class="radio-box__state radio-box__state--primary">
+                                                        <!--Thanh toán thẻ-->
+                                                        <label class="radio-box__label" for="pay-with-card">Thanh
+                                                            toán với Thẻ tín dụng / Thẻ ghi nợ</label>
+                                                    </div>
+                                                </div>
+
+                                                <span class="gl-text u-s-m-t-6">Thẻ tín dụng phải đủ điều kiện sử
+                                                    dụng tại Việt Nam.</span>
+                                            </div>
+                                            <div class="u-s-m-b-10">
+
+                                                <div class="check-box">
+
+                                                    <input type="checkbox" id="term-and-condition">
+                                                    <div class="check-box__state check-box__state--primary">
+                                                        <!--Đồng ý với chính sách mua hàng-->
+                                                        <label class="check-box__label" for="term-and-condition">Tôi
+                                                            đồng ý với</label>
+                                                    </div>
+                                                </div>
+
+                                                <a class="gl-link">Chính sách mua hàng.</a>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn--e-brand-b-2" type="submit">ĐẶT HÀNG</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------- End - ĐẶT HÀNG -------->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----FOOTER----->
+    <footer class="footer">
+        <div class="block">
+            <!--LOGO-->
+            <img width="100" src="IMAGE/logo.png" alt="Logo">
+            <p>Litah Arttoys - Mang đến cho khách hàng những sản phẩm độc đáo và chất lượng.
+            </p>
+        </div>
+        <div class="block"> <!--LIÊN HỆ-->
+            <h3> LIÊN HỆ </h3>
+            <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"> <i class="fas fa-map"></i> 86 Tản Đà,
+                Phường 11, Quận 5, Tp.HCM </a>
+            <a href="tel:0868 959 902"><i class="fas fa-phone"></i> 0868 959 902</a>
+            <a href="mailto:litaharttoys@gmail.com"><i class="fas fa-envelope"></i> litaharttoys@gmail.com</a>
+        </div>
+        <div class="block"> <!--CHÍNH SÁCH-->
+            <h3> CHÍNH SÁCH </h3>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách mua hàng</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chương trình khuyến mãi</a>
+        </div>
+    </footer>
+    <!-----END FOOTER----->
+
+    <!--====== Vendor Js ======-->
+    <script src="JS/ThanhToan/vendor.js"></script>
+
+    <!--====== Thanh toan Js ======-->
+    <script src="JS/ThanhToan/ThanhToan.js"></script>
+    <!--Link js header-->
+    <script src="JS/header.js"></script>
+</body>
+
+</html>

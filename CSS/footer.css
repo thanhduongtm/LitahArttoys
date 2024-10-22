@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*----------FOOTER----------*/
+.footer {
+    background-color: #fff1e1;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px; /* Khoảng cách nội dung từ mép của footer */
+    display: flex; /* Thiết lập hiển thị flexbox để quản lý layout */
+    justify-content: space-around; /* Căn giữa các phần tử con và phân bố cân đối khoảng trắng xung quanh chúng */
+    flex-wrap: wrap; /* không đủ sẽ xuống dòng*/
+  }
+  
+.footer .block {
+    width: 25%; /* Chỉnh kích thước block về 100% trên điện thoại */
+    margin-bottom: 0px; /* Tạo khoảng cách giữa các block */
+}
+  
+.footer .block h3 {
+  border-bottom: 1px solid #c23a00; /* Đặt đường viền dưới cho tiêu đề h3 */
+  padding-bottom: 5px; /* Khoảng cách giữa tiêu đề và phần còn lại của block */
+  color: #eb7a4a;
+  font-size: 1.7rem;
+  }
+
+.footer .block p {
+  font-size: 1.4rem;
+  color:#eb7a4a;
+}
+
+.footer .block a {
+  display: block; /*hiển thị dạng block để chiếm toàn bộ chiều rộng*/
+  font-size: 1.4rem;
+  color: #eb7a4a;
+  padding: 1rem 0; /*khoảng trắng phía trên và dưới là 1rem, trái và phải là 0 */
+  text-decoration: none; /*xoá gạch dưới ở liên kết*/
+}
+
+.footer .block a i {
+  color: #eb7a4a;
+}
+
+/*Đổi màu khi di chuột đến*/
+.footer .block a:hover {
+  color:#b53d0a;
+}
+
+/* Thêm media query cho màn hình có kích thước nhỏ */
+@media (max-width: 768px)/* Khi màn hình nhỏ hơn 768px, cần thiết lập lại chiều rộng của các block */
+   { .footer .block {
+        width: 100%;
+        margin-bottom: 20; /* Reset khoảng cách giữa các block */
+    }
+}

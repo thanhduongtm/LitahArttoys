@@ -1,0 +1,447 @@
+body {
+    font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+/*Cài đặt trang*/
+html {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*Ngăn chặn hiển thị màu sáng khi một phần tử được chạm vào trên các thiết bị cảm ứng*/
+html.boxed {
+    background-color: #eee;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /*Duy trì nhất quán cho layout*/
+}
+
+/*Định dạng trang giỏ hàng */
+body {
+    line-height: 1.5;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Định dạng kiểu cho heading*/
+h1 {
+    text-transform: uppercase; /*chuyển thành chữ hoa*/
+    letter-spacing: 1px;
+    color: #e8885f;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+  }
+  
+  h1:after {
+    content: " ";
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: #e8885f;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+
+/*Cài đặt kiểu cho các liên kết*/
+a,
+a:hover,
+a:focus {
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section__content {
+    position: relative;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/*----------Bảng sản phẩm----------*/
+/* ảnh phần các sản phẩm trong giỏ hàng */
+.u-img-fluid {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/*Định dạng bảng sản phẩm trong giỏ hàng*/
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-p {
+    width: 100%;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+}
+
+/*Định dạng các hàng và cột trong bảng*/
+.table-p tr {
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.table-p td {
+    padding: 20px;
+}
+
+/*Định dạng ảnh sản phẩm*/
+.table-p__img-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    width: 120px;
+    height: 120px;
+}
+
+.table-p__img-wrap img {
+    display: block;
+    min-width: 120px;
+    transition: transform 0.3s ease-in-out;
+    /* hiệu ứng chuyển động*/
+}
+/*Khi bấm vào ảnh*/
+.table-p__img-wrap img:hover {
+    transform: scale(1.2);
+    /* tăng 1.2 lần kích thước ban đầu) */
+  }
+.table-p__info {
+    margin-left: 18px;
+}
+.table-p__name {
+    display: block;
+}
+/*Chỉnh màu chữ tên sp trước và sau khi di chuột*/
+.table-p__name>a { /*"tất cả các thẻ <a> con của phần tử có lớp là .table-p__name*/
+    color: #e8885f;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.5s;
+}
+.table-p__name>a:hover {
+    color: #ff4500;
+}
+
+/*Điều chỉnh kiểu giá*/
+.table-p__price {
+    text-align: center;
+    display: block;
+    color: #9D5A4D;
+    font-size: 14px;
+    font-weight: 600;
+}
+/*Giá trước khi giảm*/
+.table-p__price .discount-price {
+    text-decoration: line-through;
+    color: #e8885f;
+}
+/*Giá sau khi giảm*/
+.table-p__price .price .discounted {
+    color: #ff4500;
+}
+/*thùng rác*/
+.table-p__input-counter-wrap {
+    text-align: center;
+}
+.table-p__del-wrap {
+    text-align: center;
+}
+.table-p__delete-link {
+    padding: 10px;
+    font-size: 16px;
+    display: inline-block;
+    color: #e8885f;
+    transition: color 0.5s;
+}
+
+.table-p__delete-link:hover {
+    color: #ff4500;
+}
+
+/* Định dạng box nhỏ điều chỉnh số lượng sản phẩm trong giỏ hàng */
+.input-counter {
+    position: relative;
+    display: inline-block;
+    max-width: 132px;
+    min-width: 132px;
+}
+/*Định dạng chữ trong box điều chỉnh*/
+.input-counter__text {
+    border-radius: 25px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.input-counter__text:focus {
+    outline: 0;
+}
+
+/*Điều chỉnh khung viền ở box điều chỉnh số lượng sản phẩm*/
+.input-counter--text-primary-style {
+    color: #333333;
+    transition: all 0.6s linear;
+    border: 2px solid transparent;
+    background-color: #f1f1f1;
+}
+/*Sau khi click chuột vào*/
+.input-counter--text-primary-style:focus {
+    background-color: transparent;
+    border-color: #ff4500;
+}
+/*----------END Bảng sản phẩm----------*/
+
+/*----------Box tiếp tục mua sắm, giỏ hàng----------*/
+/*Định dạng box tiếp tục mua sắm, xoá giỏ hàng,...*/
+.route-box {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #f1f1f1;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/*Điều chỉnh liên kết trong box tiếp tục mua sắm, xoá giỏ hàng,...*/
+.route-box__link {
+    color: #e8885f;
+    font-size: 13px;
+    text-align: center;
+    padding: 17px;
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.5s;
+}
+
+/*Đổi màu khi di chuột dến*/
+.route-box__link:hover {
+    color: #ff4500;
+}
+
+/*khoảng trống từ icon đến chữ phía bên phải*/
+.route-box i {
+    margin-right: 2px;
+}
+
+/*Định dạng box tiếp tục mua sắm, xoá giỏ hàng,...*/
+.f-cart__pad-box {
+    border: 1px solid #eee;
+    padding: 32px 22px 35px;
+}
+/*----------END Box tiếp tục mua sắm, giỏ hàng----------*/
+
+/*----------Box nhập mã giảm giá----------*/
+/*Mã giảm giá*/
+.msg {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #f1f1f1;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  
+  .msg__text {
+    padding: 8px 0;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+  }
+
+/*điều chỉnh cho liên kết*/
+.gl-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: coral;
+    transition: color 0.5s linear;
+  }
+  
+/*đổi màu khi di chuột đến*/
+  .gl-link:hover {
+    color: #ff4500;
+  }
+
+/*chữ nhỏ giải thích bên dưới*/
+.gl-text {
+  display: block;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+/*Định dạng form rộng 50% so với phần tử chứa form*/
+.c-f__form {
+    position: relative;
+    width: 50%;
+  }
+
+/* Cài đặt các chữ ở khung nhập thông tin vào */
+.input-text {
+    font-size: 12px;
+    background-clip: padding-box;
+    padding: 0 18px;
+    height: 40px;
+  }
+  
+  .input-text--primary-style {
+    color: #333333;
+    transition: all 0.6s linear;
+    border: 2px solid transparent;
+    background-color: #f1f1f1;
+  }
+  
+  .input-text--primary-style:focus {
+    background-color: transparent;
+    border-color: #ff4500;
+  }
+  
+  .input-text:focus {
+    outline: 0;
+  }
+  
+  .input-text:disabled {
+    background-color: #cecece;
+  }
+
+
+/*-----MÃ GIẢM GIÁ-----*/
+/*Định dạng box mã giảm giá*/
+.coupons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:#eee;
+    justify-content: space-between;
+    margin: 20px 15px;
+}
+.coupons-div {
+    display: flex;
+    align-items: center;
+}
+
+/*Định dạng label mã giảm giá*/
+.coupons-div label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color:#e8885f;
+    font-weight: 600;
+}
+
+/*Định dạng chữ ở khung nhập mã*/
+.coupons-div input {
+    width: 100%;
+    padding: 8px;
+    box-sizing:border-box;
+}
+
+/*Định dạng nút gửi*/
+.coupons-div button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#fa4400;
+    border: 2px solid #fa4400;
+}
+/*Nút gửi đổi màu sau khi nhấn vào*/
+.coupons-div button:hover {
+    background:#fa4400;
+    color:#fff;
+}
+/*-----END MÃ GIẢM GIÁ-----*/
+
+
+/*----------Bảng giá tiền phía dưới----------*/
+/*Định dạng bảng giá tiền*/
+.f-cart__table {
+    width: 100%;
+    border-collapse: collapse;
+    /*loại bỏ khoảng trắng bằng cách gộp viền*/
+}
+
+.f-cart__table td {
+    color: #e8885f;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/*Định dạng ô đầu tiên mỗi hàng trong bảng*/
+.f-cart__table td:first-child {
+    text-align: left;
+}
+
+/*Định dạng các ô còn lại trong bảng*/
+.f-cart__table td {
+    text-align: right;
+}
+
+/*Điều chỉnh chữ tổng thanh toán ở hàng cuối đậm và lớn hơn*/
+.f-cart__table tr:last-child td {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Cài đặt Button */
+.btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*Chỉnh box chuyển qua trang thanh toán*/
+.btn--e-brand-b-2 {
+    color: #ff4500;
+    background-color: #fff;
+    border: 2px solid #ff4500;
+    transition: background-color 0.5s ease-in, border-color 0.5s ease-in;
+}
+
+.btn--e-brand-b-2:hover {
+    background-color: #fa4400;
+    border-color: #fa4400;
+    color: #fff;
+}
+
+.btn--e-transparent-brand-b-2 {
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    background-color: transparent;
+    transition: border-color .5s ease-in;
+}
+/*----------END Bảng giá tiền phía dưới----------*/
+
+/*Giao diện trên thiết bị điện thoại*/
+@media only screen and (max-width: 768px) {
+
+    .table-p td {
+        padding: 8px;
+    }
+    
+    .table-p__info {
+        margin-left: 10px;
+    }
+    
+}

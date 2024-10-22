@@ -1,0 +1,128 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    color: #e8885f;
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1:after {
+    content: "";
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: #e8885f;
+    margin: 0.5rem auto;
+}
+.username{
+    margin-bottom: 8px;
+    display: block;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login-options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    right: 20px;
+    top: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.login-options a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.container1 {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin: 15px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: #e8885f;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    color: #ffedda;
+    background-color: #e8885f;
+}
+.gl-s-api {
+    width: 300px;
+    margin: 10px auto;
+}
+
+/*GOOGLE*/
+
+.gl-s-api__btn--gplus {
+    background-color: #e8885f;
+}
+
+
+.gl-s-api__btn--gplus:hover {
+    background-color: #e76554;
+}
+
+
+.gl-s-api__btn {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.5s linear;
+}
+
+.register-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #e8885f;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: #c76a4f;
+}

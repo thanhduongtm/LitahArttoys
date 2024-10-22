@@ -1,0 +1,153 @@
+body {
+    font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  h1 {
+    text-transform: uppercase; /*chuyển thành chữ hoa*/
+    letter-spacing: 1px;
+    color: #e8885f;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+  }
+  .thongtin h1 {
+    padding-top: 100px;
+  }
+  
+  h1:after {
+    content: " ";
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: #e8885f;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+
+.container p {
+    text-align: left;
+}
+
+a {
+    color: #e8885f;
+    text-decoration: none;
+}
+
+/*-----Chia 2 khối-----*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.khoitrai {
+    flex: 1 0 50%;
+    /*chiếm 50% trên màn hình lớn */
+    text-align: center;
+}
+
+.khoiphai {
+    flex: 1 0 50%;
+    /*chiếm 50% trên màn hình lớn */
+    text-align: center;
+}
+
+/*----------THÔNG TIN LIÊN HỆ----------*/
+.thongtin {
+    background: linear-gradient(to bottom, #f4e6e6 0%, rgba(106, 60, 60, 0));
+}
+
+.nd2 {
+    text-align: left;
+    margin-left: 40px;
+    font-size: 150%;
+}
+
+iframe {
+    margin-top: 20px;
+}
+
+p {
+    margin: 0px;
+    padding-top: 10px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 28px;
+    color: #e8885f;
+}
+
+/*----------FORM ĐẶT LỊCH----------*/
+      .booking-form {
+          max-width: 800px;
+          width: 70%;
+          margin: 0 auto;
+      }
+
+      .form-row {
+          margin-bottom: 25px;
+      }
+
+      input {
+          width: calc(100% - 10px);
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color:rgb(from 244 230 230 100%);
+      }
+
+      input[type="submit"] {
+          background-color: #e8885f;
+          color: white;
+          border: none;
+          padding: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          align-items:center ;
+      }
+
+      .container{
+        width:100%;
+        padding-right:15px;
+        padding-left:15px;
+        margin-right:auto;margin-left:auto}
+        @media (min-width:576px){
+            .container{max-width:540px}}
+        @media (min-width:768px){
+            .container{max-width:720px}}
+        @media (min-width:992px){
+            .container{max-width:960px}}
+        @media (min-width:1200px){
+            .container{max-width:1140px}}
+    .container-fluid{
+        width:100%;
+        padding-right:15px;
+        padding-left:15px;
+        margin-right:auto;
+        margin-left:auto
+    }
+    
+    .row{
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        margin-right:-15px;
+        margin-left:-15px
+    }
+     .col-md-12,.col-md-6{
+        position:relative;
+        width:100%;
+        min-height:1px;
+        padding-right:15px;
+        padding-left:15px
+    }
+    .col-md-6 {
+        -ms-flex:0 0 50%;
+        flex:0 0 50%;
+        max-width:50%
+    }
+    .col-md-12 {
+        -ms-flex:0 0 100%;
+        flex:0 0 100%;
+        max-width:100%
+    } 

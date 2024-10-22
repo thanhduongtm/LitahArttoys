@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý sản phẩm</title>
+  <link rel="stylesheet" href="CSS/QuanTri/main.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!--===========================ĐẦU TRANG===================================-->
+    <nav id="navbar-main" class="navbar is-fixed-top">
+      <div class="navbar-brand">
+        <!--==============MENU ĐẦU TRANG BÊN TRÁI, TRY CẬP ĐẾN CÁC TRANG KHÁC CỦA ADMIN===============-->
+        <a class="navbar-item mobile-aside-button">
+          <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+        </a>
+
+        <!--==============KHUNG TÌM KIẾM Ở ĐẦU TRANG============-->
+        <div class="navbar-item">
+          <div class="control"><input placeholder="Tìm kiếm mọi thứ..." class="input"></div>
+        </div>
+      </div>
+
+      <!--========================MENU BÊN PHẢI DÙNG ĐỂ ĐĂNG XUẤT VÀ CÁC LỰA CHỌN KHÁC============ -->
+      <div class="navbar-brand is-right">
+        <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+          <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+        </a>
+      </div>
+
+      <!--=============MENU PHỤ BÊN TRÁI======================-->
+      <div class="navbar-menu" id="navbar-menu">
+        <div class="navbar-end">
+          <!--==============NÚT ĐĂNG XUẤT Ở GÓC PHẢI TRÊN ============-->
+          <div class="navbar-item dropdown has-divider has-user-avatar">
+            <hr class="navbar-divider">
+            <a href="index.html" class="navbar-item">
+              <span class="icon"><i class="mdi mdi-logout"></i></span>
+              <span>Đăng xuất</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+  </div>
+  </nav>
+
+
+  <!--===========================ĐẦU TRANG: KẾT THÚC ===================================-->
+
+
+  <!--======================MENU CHÍNH LIÊN KẾT CÁC TRANG================-->
+  <aside class="aside is-placed-left is-expanded">
+
+    <div class="menu is-menu-main">
+      <p class="menu-label">QUẢN TRỊ</p>
+      <!--================ MỤC CON: DASHBOARD ======================-->
+      <ul class="menu-list">
+        <li class="--set-active-tables-html">
+          <a href="QuanTri.html">
+            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+            <span class="menu-item-label">Tổng quan</span>
+          </a>
+        </li>
+      </ul>
+
+      <!--================ MỤC CON: SẢN PHẨM ======================-->
+      <ul class="menu-list">
+        <li class="active">
+          <a href="Ad-SanPham.html">
+            <span class="icon"><i class="mdi mdi-table"></i></span>
+            <span class="menu-item-label">Sản Phẩm</span>
+          </a>
+        </li>
+      </ul>
+        <!--================ MỤC CON: THÀNH VIÊN ======================-->
+        <ul class="menu-list">
+        <li class="--set-active-profile-html">
+          <a href="Ad-ThanhVien.html">
+            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+            <span class="menu-item-label">Thành viên</span>
+          </a>
+        </li>
+      </ul>
+      <!--================ MỤC CON: KHUYẾN MÃI ======================-->
+      <ul class="menu-list">
+        <li class="--set-active-profile-html">
+          <a href="Ad-KhuyenMai.html">
+            <span class="icon"><i class="mdi mdi-tag-text-outline"></i></span>
+            <span class="menu-item-label">Khuyến mãi</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!--======================MENU CHÍNH LIÊN KẾT CÁC TRANG: KẾT THÚC ================-->
+
+  <!--====================TRANG CHÍNH=======================-->
+  <section class="is-title-bar">
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+      <ul>
+        <li>Quản trị</li>
+        <li>Sản phẩm</li>
+      </ul>
+
+      <!--=====================NÚT THÊM MỚI ======================-->
+      <a href="Ad-ThemMoi.html" class="button" style="background-color:#e8885f;">
+        <span class="icon"><i></i></span>
+        <span>Thêm mới</span>
+      </a>
+
+      <!--=============NÚT XÓA CÁC SẢN PHẨM ĐÃ CHỌN ========-->
+      <a onclick="location.reload()" class="button" style="background-color:#e8885f;">
+        <span class="icon"><i></i></span>
+        <span>Xóa SP đã chọn</span>
+      </a>
+    </div>
+  </section>
+
+  <!--=======================TIÊU ĐỀ TRANG SẢN PHẨM ==================-->
+  <section class="is-hero-bar">
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+      <h1 class="title">
+        Sản phẩm
+      </h1>
+    </div>
+  </section>
+
+
+  <section class="section main-section">
+
+    <!--====================BẢNG SỬA XÓA SẢN PHẨM ====================================================-->
+    <div class="card has-table">
+
+      <!--=======TẠO BẢNG SẢN PHẨM=============================================-->
+      <div class="card-content">
+        <table>
+          <thead>
+            <tr>
+              <!--====TẠO HỘP KIỂM Ở ĐẦU MỖI DÒNG SẢN PHẨM=========-->
+              <th class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </th>
+
+              <th class="image-cell"></th>
+              <th>Tên</th>
+              <th>Mã SP</th>
+              <th>Kho</th>
+              <th>Giá</th>
+              <th>Danh mục</th>
+              <th>Ngày tạo</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <!--===========SẢN PHẨM 1==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/1.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">SPACE MOLLY EGG TART</td>
+              <td data-label="Mã SP">SM01</td>
+              <td data-label="Kho">5</td>
+              <td data-label="Giá">5.500.000đ</td>
+              <td data-label="Danh mục">Space Molly</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 1_KẾT THÚC ==========================-->
+
+            <!--===========SẢN PHẨM 2==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/2.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">SPACE MOLLY MINIONS</td>
+              <td data-label="Mã SP">SM02</td>
+              <td data-label="Kho">10</td>
+              <td data-label="Giá">5.000.000đ</td>
+              <td data-label="Danh mục">Space Molly</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 2_KẾT THÚC ==========================-->
+
+            <!--===========SẢN PHẨM 3==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/3.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">SPACE MOLLY BASKETBALL</td>
+              <td data-label="Mã SP">SM03</td>
+              <td data-label="Kho">20</td>
+              <td data-label="Giá">5.200.000đ</td>
+              <td data-label="Danh mục">Space Molly</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 3_KẾT THÚC ==========================-->
+            <!--===========SẢN PHẨM 4==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/4.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">SPACE MOLLY COCA V2</td>
+              <td data-label="Mã SP">SM04</td>
+              <td data-label="Kho">2</td>
+              <td data-label="Giá">10.500.000đ</td>
+              <td data-label="Danh mục">Space Molly</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 4_KẾT THÚC ==========================-->
+
+
+            <!--===========SẢN PHẨM 5==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/11.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">SPACE MOLLY MICKEY </td>
+              <td data-label="Mã SP">SM05</td>
+              <td data-label="Kho">10</td>
+              <td data-label="Giá">6.500.000đ</td>
+              <td data-label="Danh mục">Space Molly</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 5_KẾT THÚC ==========================-->
+            <!--===========SẢN PHẨM 6 ==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/13.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">MR.PA ANIMALS</td>
+              <td data-label="Mã SP">MK01</td>
+              <td data-label="Kho">2</td>
+              <td data-label="Giá">1.300.000đ</td>
+              <td data-label="Danh mục">Móc khoá gấu</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 6_KẾT THÚC ==========================-->
+            <!--===========SẢN PHẨM 7==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/10.JPG" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">PUCKY FOREST</td>
+              <td data-label="Mã SP">MK02</td>
+              <td data-label="Kho">5</td>
+              <td data-label="Giá">3.500.000đ</td>
+              <td data-label="Danh mục">Móc khoá gấu</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 7_KẾT THÚC ==========================-->
+            <!--===========SẢN PHẨM 8==========================-->
+          <tbody>
+            <tr>
+              <td class="checkbox-cell">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span class="check"></span>
+                </label>
+              </td>
+
+              <td class="image-cell">
+                <div class="image">
+                  <img src="IMAGE/TrangChu/16.jpg" class="rounded-full">
+                </div>
+              </td>
+              <td data-label="Tên">BAOAO CUDDLE</td>
+              <td data-label="Mã SP">MK03</td>
+              <td data-label="Kho">100</td>
+              <td data-label="Giá">2.500.000đ</td>
+              <td data-label="Danh mục">Móc khoá gấu</td>
+              <td data-label="Ngày tạo">
+                <small class="text-gray-500" title="25/11/2023"> 25/08/2024</small>
+              </td>
+
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <!--============NÚT SỬA SẢN PHẨM===========-->
+                  <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                    <span class="icon"><i class="mdi mdi-pen"></i></span>
+                  </button>
+
+                  <!--============NÚT XEM XÓA SẢN PHẨM===========-->
+                  <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <!--===========SẢN PHẨM 8_KẾT THÚC ==========================-->
+
+
+          </tbody>
+        </table>
+
+        <div class="table-pagination">
+          <div class="flex items-center justify-between">
+            <div class="buttons">
+              <button type="button" class="button active">1</button>
+              <button type="button" class="button">2</button>
+              <button type="button" class="button">3</button>
+              <button type="button" class="button">4</button>
+            </div>
+            <small>Page 1 of 4</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===============================================================================================-->
+
+
+  <!--================NỘI DUNG NÚT XÓA SẢN PHẨM====================-->
+  <div id="sample-modal" class="modal">
+    <div class="modal-background --jb-modal-close"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Xóa sản phẩm </p>
+      </header>
+      <section class="modal-card-body">
+        <p>Bạn có chắc muốn <b>XÓA</b> không?</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button onclick="location.reload()" class="button --jb-modal-close">Hủy</button>
+        <button onclick="location.reload()" class="button red --jb-modal-close">Xác nhận</button>
+      </footer>
+    </div>
+  </div>
+
+  <!--================NỘI DUNG NÚT SỬA SẢN PHẨM====================-->
+  <div id="sample-modal-2" class="modal">
+    <div class="modal-background --jb-modal-close"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Sửa sản phẩm</p>
+      </header>
+      <section class="modal-card-body">
+        <p><b>Chỉnh sửa</b></p>
+        <p>Nội dung thay đổi</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button onclick="location.reload()" class="button --jb-modal-close">Hủy</button>
+        <button onclick="location.reload()" class="button blue --jb-modal-close">Cập nhật</button>
+      </footer>
+    </div>
+  </div>
+  <!-- Scripts below are for demo only -->
+  <script type="text/javascript" src="JS/QuanTri/main.min.js"></script>
+
+
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '658339141622648');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+body {
+    font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    /*chuyển thành chữ hoa*/
+    letter-spacing: 1px;
+    color: #e8885f;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+h1:after {
+    content: " ";
+    display: block;
+    width: 220px;
+    height: 1px;
+    background-color: #e8885f;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #e8885f;
+}
+
+/*----TRANG THÔNG TIN KHÁCH HÀNG -----*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #ffedda;
+    color: #e8885f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #e8885f;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.sidebar ul li a {
+    color: #e8885f;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* màu nền*/
+.dash__box--bg-white {
+    background-color: 0px 2px 8px rgba(0, 0, 0, 0.196);
+}
+
+/*màu cho hiệu ứng bóng đổ*/
+.dash__box--shadow {
+    box-shadow: -2px 0px 14px 0 rgba(36, 37, 38, 0.08);
+}
+
+.dash__box--radius {
+    border-radius: 25px;
+}
+
+
+.dash__pad-2 {
+    padding: 24px;
+}
+
+.dash__h1 {
+    line-height: 1;
+    color: #e8885f;
+    font-size: 24px;
+}
+
+
+.dash__link>a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.5s linear;
+}
+
+.dash__link--brand>a {
+    color: #e8885f;
+}
+
+.dash__link--brand>a:hover {
+    color: #9D5A4D;
+}
+
+
+.dash__table-wrap {
+    height: 400px;
+    width: 800px;
+    overflow: auto;
+}
+
+/*BẢNG ĐƠN HÀNG GẦN ĐÂY*/
+.dash__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dash__table thead {
+    background-color: #e8885f;
+
+}
+
+.dash__table th,
+.dash__table td {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #000000;
+}
+
+.dash__table th {
+    font-size: 16px;
+}
+
+.dash__table td {
+    font-size: 16px;
+}
+
+.dash__table tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+/* Áp dụng màu xen kẽ cho các hàng chẵn */
+.dash__table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Áp dụng màu xen kẽ cho các hàng lẻ */
+.dash__table tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.dash-edit-p {
+    width: 100%;
+}
+#sidebar-dropdown {
+    color: #e8885f;
+}
+
+@media (max-width: 768px) {
+    .sidebar ul {
+        display: none;
+    }
+
+    .sidebar select {
+        display: block;
+        /* dropdown */
+    }
+}
+@media (min-width: 769px) {
+    .sidebar select {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Liên hệ</title>
+    <!--Link Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/LienHe.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="all">
+</head>
+
+<body>
+       <!----------HEADER---------->
+        <header class="header">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="IMAGE/logo_ngan.png" width="100px" alt="Logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" target="_self">TRANG CHỦ</a>
+                <a href="SanPham.html" target="_self">SẢN PHẨM</a>
+                <a href="SanPham.html" target="_self">PHỤ KIỆN</a>
+                <a href="LienHe.html" target="_self">LIÊN HỆ</a>
+                <a href="TaiKhoan.html" target="_self">TÀI KHOẢN </a>
+            </nav>
+            <div class="icon">
+                <div class="fas fa-bars" id="menu"></div>
+                <div class="fas fa-search" id="search"></div>
+                <a href="GioHang.html">
+                    <div class="fas fa-shopping-cart" id="cart"></div>
+                </a>
+                <div class="fas fa-user" id="login" onclick="showLoginOptions()"></div>
+            </div>
+
+            <!-- Mô-đun hiển thị lựa chọn đăng nhập -->
+            <div class="login-options" id="loginOptions">
+                <a href="DangNhap.html">ĐĂNG NHẬP</a>
+                <a href="DangKy.html">ĐĂNG KÝ</a>
+                <a href="QuanTri.html">QUẢN TRỊ</a>
+            </div>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </header>
+    </section>
+    <!----------END HEADER---------->
+    
+        <!----------THÔNG TIN LIÊN HỆ---------->
+        <div class="thongtin">
+            <h1>LITAH ARTTOYS</h1>
+            <div class="container">
+                <div class="khoitrai">
+                    <div class="nd2">
+                        <p> <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"><i class="fa-solid fa-location-dot"></i>
+                            86 Tản Đà, phường 11, quận 5, TP.HCM </a></p> <br>
+                        <p><i class="fa-solid fa-clock"></i> 9:00-21:00</p> <br>
+                        <p><i class="fa-solid fa-phone"></i> 0868 959 902</p> <br>
+                        <p><i class="fa-solid fa-envelope"></i> litaharttoys@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="khoiphai">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.756960020692!2d106.66194657417256!3d10.753205059623385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efa00f2f0e5%3A0xc4e166d7825e8ab9!2zODYgxJAuIFThuqNuIMSQw6AsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDUsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1699867120921!5m2!1sen!2s"
+                        width="450" height="200" style="border:0;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+         <!----------FORM ĐẶT LỊCH---------->
+
+         <div class="booking-form">
+            <h1 id="DatLich" style="width:100%;">LIÊN HỆ VỚI LITAH ARTTOYS</h1>
+            <form class="booking-form">
+                <div class="form-row">
+                    <input type="text" id="full-name" name="full-name" placeholder="Nhập họ và tên">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="email" name="email" placeholder="Nhập địa chỉ email">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="service-name" name="service-name" placeholder="Nhập nội dung">
+                </div>
+                <div style="width:104%; " class="form-row">
+                    <input type="submit" value="GỬI">
+                </div>
+            </form>
+        </div>
+
+    <!-----FOOTER----->
+    <footer class="footer">
+        <div class="block">
+            <!--LOGO-->
+            <img width="100" src="IMAGE/logo.png" alt="Logo">
+            <p>Litah Arttoys - Mang đến cho khách hàng những sản phẩm độc đáo và chất lượng.
+            </p>
+        </div>
+        <div class="block"> <!--LIÊN HỆ-->
+            <h3> LIÊN HỆ </h3>
+            <a href="https://maps.app.goo.gl/rUjSKGHEadA2bu7aA" target="_blank"> <i class="fas fa-map"></i> 86 Tản Đà,
+                Phường 11, Quận 5, Tp.HCM </a>
+            <a href="tel:0868 959 902"><i class="fas fa-phone"></i> 0868 959 902</a>
+            <a href="mailto:litaharttoys@gmail.com"><i class="fas fa-envelope"></i> litaharttoys@gmail.com</a>
+        </div>
+        <div class="block"> <!--CHÍNH SÁCH-->
+            <h3> CHÍNH SÁCH </h3>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chính sách mua hàng</a>
+            <a href="#"><i class="fas fa-chevron-right"></i> Chương trình khuyến mãi</a>
+        </div>
+    </footer>
+    <!-----END FOOTER----->
+
+</body>
+<!--Link js header-->
+<script src="JS/header.js"></script>
+
+</html>
