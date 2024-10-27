@@ -325,27 +325,44 @@
     </div> 
   </section>
 
+  <!--====================PHẦN QUẢN LÝ ĐƠN HÀNG=======================-->
   <div class="container mt-4">
     <div class="row mb-3">
-        <div class="col-12">
-            <div class="d-flex justify-content-between">
-                <div>
-                    <a href="#" class="filter-link">Tất cả (1198)</a> | 
-                    <a href="#" class="filter-link">Đang xử lý (1)</a> | 
-                    <a href="#" class="filter-link">Tạm giữ (1)</a> | 
-                    <a href="#" class="filter-link">Đã hoàn thành (1195)</a> | 
-                    <a href="#" class="filter-link">Đã hoàn tiền (1)</a>
-                </div>
-                <div>
-                    <input type="text" class="form-control" placeholder="Tìm đơn hàng" style="width: 200px;">
-                </div>
-            </div>
+      <div class="col-12">
+        <div class="d-flex justify-content-between">
+          <div>
+            <a href="#" class="filter-link">Tất cả (1198)</a> | 
+            <a href="#" class="filter-link">Đang xử lý (1)</a> | 
+            <a href="#" class="filter-link">Tạm giữ (1)</a> | 
+            <a href="#" class="filter-link">Đã hoàn thành (1195)</a> | 
+            <a href="#" class="filter-link">Đã hoàn tiền (1)</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <input type="text" class="form-control me-2" placeholder="Tìm đơn hàng" style="width: 200px;" id="filter-search">
+            <input type="date" class="form-control me-2" id="filter-date" placeholder="Chọn ngày đặt">
+            <select class="form-control me-2" id="filter-status">
+              <option value="">Tất cả đơn hàng</option>
+              <option value="Đang xử lý">Đang xử lý</option>
+              <option value="Đã hoàn thành">Đã hoàn thành</option>
+              <option value="Đã hoàn tiền">Đã hoàn tiền</option>
+            </select>
+            <select class="form-control me-2" id="filter-payment">
+              <option value="">Tất cả PTTT</option>
+              <option value="COD">COD</option>
+              <option value="MOMO">MOMO</option>
+              <option value="THẺ NGÂN HÀNG">Thẻ ngân hàng</option>
+            </select>
+            <input type="number" class="form-control me-2" id="filter-amount" placeholder="Nhập tổng tiền tối thiểu">
+            <!--====== Nút Áp Dụng ======-->
+            <button class="button green" id="apply-filters">Áp dụng</button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--=======TẠO BẢNG KHUYẾN MÃI=============================================-->
     <div class="card-content">
-      <table>
+      <table id="order-table">
         <thead>
           <tr>
             <!--====TẠO HỘP KIỂM Ở ĐẦU MỖI DÒNG KHUYẾN MÃI=========-->
@@ -360,11 +377,12 @@
             <th>Tình trạng</th>
             <th>Phương thức thanh toán</th>
             <th>Tổng tiền</th>
+            <th>Hành động</th> <!-- Thêm cột Hành động -->
           </tr>
         </thead>
 
-        <!--=========== DH1==========================-->
         <tbody>
+          <!--=========== DH1==========================-->
           <tr>
             <td class="checkbox-cell">
               <label class="checkbox">
@@ -377,11 +395,9 @@
             <td data-label="Tình trạng">Đang xử lý</td>
             <td data-label="Phương thức thanh toán"> COD </td>
             <td data-label="Tổng tiền"> 2.000.000VNĐ </td>
-            
-
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                  <!--============NÚT XEM===========-->
+                <!--============NÚT XEM===========-->
                 <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
                   <span class="icon"><i class="mdi mdi-eye"></i></span>
                 </button>
@@ -389,7 +405,6 @@
                 <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
                   <span class="icon"><i class="mdi mdi-pen"></i></span>
                 </button>
-
                 <!--============NÚT XÓA ==========-->
                 <button class="button small red --jb-modal" data-target="sample-modal" type="button">
                   <span class="icon"><i class="mdi mdi-trash-can"></i></span>
@@ -400,7 +415,6 @@
           <!--===========DH1 KẾT THÚC ==========================-->
 
           <!--=========== DH2==========================-->
-        <tbody>
           <tr>
             <td class="checkbox-cell">
               <label class="checkbox">
@@ -413,11 +427,9 @@
             <td data-label="Tình trạng">Đã hoàn thành</td>
             <td data-label="Phương thức thanh toán"> COD </td>
             <td data-label="Tổng tiền"> 6.500.000VNĐ </td>
-            
-
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                  <!--============NÚT XEM===========-->
+                <!--============NÚT XEM===========-->
                 <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
                   <span class="icon"><i class="mdi mdi-eye"></i></span>
                 </button>
@@ -425,7 +437,6 @@
                 <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
                   <span class="icon"><i class="mdi mdi-pen"></i></span>
                 </button>
-
                 <!--============NÚT XÓA ==========-->
                 <button class="button small red --jb-modal" data-target="sample-modal" type="button">
                   <span class="icon"><i class="mdi mdi-trash-can"></i></span>
@@ -435,79 +446,69 @@
           </tr>
           <!--===========DH2 KẾT THÚC ==========================-->
 
-       <!--=========== DH3==========================-->
-       <tbody>
-        <tr>
-          <td class="checkbox-cell">
-            <label class="checkbox">
-              <input type="checkbox">
-              <span class="check"></span>
-            </label>
-          </td>
-          <td data-label="Mã đơn hàng">LA500</td>
-          <td data-label="Ngày đặt">02/10/2024</td>
-          <td data-label="Tình trạng">Đã hoàn thành</td>
-          <td data-label="Phương thức thanh toán"> MOMO </td>
-          <td data-label="Tổng tiền"> 2.500.000VNĐ </td>
-          
-
-          <td class="actions-cell">
-            <div class="buttons right nowrap">
+          <!--=========== DH3==========================-->
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td data-label="Mã đơn hàng">LA500</td>
+            <td data-label="Ngày đặt">02/10/2024</td>
+            <td data-label="Tình trạng">Đã hoàn thành</td>
+            <td data-label="Phương thức thanh toán"> MOMO </td>
+            <td data-label="Tổng tiền"> 2.500.000VNĐ </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
                 <!--============NÚT XEM===========-->
-              <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
-                <span class="icon"><i class="mdi mdi-eye"></i></span>
-              </button>
-              <!--============NÚT SỬA ============-->
-              <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
-                <span class="icon"><i class="mdi mdi-pen"></i></span>
-              </button>
+                <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
+                  <span class="icon"><i class="mdi mdi-eye"></i></span>
+                </button>
+                <!--============NÚT SỬA ============-->
+                <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                  <span class="icon"><i class="mdi mdi-pen"></i></span>
+                </button>
+                <!--============NÚT XÓA ==========-->
+                <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <!--===========DH3 KẾT THÚC ==========================-->
 
-              <!--============NÚT XÓA ==========-->
-              <button class="button small red --jb-modal" data-target="sample-modal" type="button">
-                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <!--===========DH3 KẾT THÚC ==========================-->
-
-        <!--=========== DH4==========================-->
-       <tbody>
-        <tr>
-          <td class="checkbox-cell">
-            <label class="checkbox">
-              <input type="checkbox">
-              <span class="check"></span>
-            </label>
-          </td>
-          <td data-label="Mã đơn hàng">LA499</td>
-          <td data-label="Ngày đặt">01/10/2024</td>
-          <td data-label="Tình trạng">Đã hoàn thành</td>
-          <td data-label="Phương thức thanh toán"> THẺ NGÂN HÀNG </td>
-          <td data-label="Tổng tiền"> 4.800.000VNĐ </td>
-          
-
-          <td class="actions-cell">
-            <div class="buttons right nowrap">
+          <!--=========== DH4==========================-->
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td data-label="Mã đơn hàng">LA499</td>
+            <td data-label="Ngày đặt">01/10/2024</td>
+            <td data-label="Tình trạng">Đã hoàn thành</td>
+            <td data-label="Phương thức thanh toán"> THẺ NGÂN HÀNG </td>
+            <td data-label="Tổng tiền"> 4.800.000VNĐ </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
                 <!--============NÚT XEM===========-->
-              <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
-                <span class="icon"><i class="mdi mdi-eye"></i></span>
-              </button>
-              <!--============NÚT SỬA ============-->
-              <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
-                <span class="icon"><i class="mdi mdi-pen"></i></span>
-              </button>
-
-              <!--============NÚT XÓA ==========-->
-              <button class="button small red --jb-modal" data-target="sample-modal" type="button">
-                <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-              </button>
-            </div>
-          </td>
-        </tr>
-        <!--===========DH4 KẾT THÚC ==========================-->
-     
-     
+                <button class="button small blue --jb-modal" data-target="sample-modal-2" type="button">
+                  <span class="icon"><i class="mdi mdi-eye"></i></span>
+                </button>
+                <!--============NÚT SỬA ============-->
+                <button class="button small green --jb-modal" data-target="sample-modal-2" type="button">
+                  <span class="icon"><i class="mdi mdi-pen"></i></span>
+                </button>
+                <!--============NÚT XÓA ==========-->
+                <button class="button small red --jb-modal" data-target="sample-modal" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <!--===========DH4 KẾT THÚC ==========================-->
 
         </tbody>
       </table>
@@ -528,6 +529,31 @@
 </section>
 <!--===============================================================================================-->
 
+<!-- ... phần modal và các script khác không thay đổi ... -->
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--===============================================================================================-->
+
+<!--================NỘI DUNG NÚT XEM THỐNG KÊ CHI TIẾT ====================-->
+<div id="sample-modal-2" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Xem thống kê chi tiết</p>
+    </header>
+
+    <section class="modal-card-body">
+      <p>Ở đây sẽ có biểu đồ theo ngày, tháng...</p>
+    </section>
+
+    <footer class="modal-card-foot">
+      <button class="button blue --jb-modal-close">Đóng</button>
+    </footer>
+  </div>
+</div>
 
 </div>
 
@@ -584,5 +610,66 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
 
 </body>
+<script>
+  // JavaScript để áp dụng các bộ lọc khi nhấn nút "Áp dụng"
+  document.getElementById('apply-filters').addEventListener('click', filterOrders);
+
+  function filterOrders() {
+    var searchFilter = document.getElementById('filter-search').value.toLowerCase();
+    var dateFilter = document.getElementById('filter-date').value;
+    var statusFilter = document.getElementById('filter-status').value;
+    var paymentFilter = document.getElementById('filter-payment').value;
+    var amountFilter = document.getElementById('filter-amount').value;
+
+    var table = document.getElementById('order-table');
+    var tbody = table.getElementsByTagName('tbody')[0];
+    var rows = tbody.getElementsByTagName('tr');
+
+    for (var i = 0; i < rows.length; i++) {
+      var cols = rows[i].getElementsByTagName('td');
+      var orderCode = cols[1].textContent.toLowerCase();
+      var date = cols[2].textContent.trim();
+      var status = cols[3].textContent.trim();
+      var payment = cols[4].textContent.trim();
+      var totalAmountText = cols[5].textContent.replace('VNĐ', '').replace(/\./g, '').trim();
+      var totalAmount = parseInt(totalAmountText) || 0;
+
+      var show = true;
+
+      // Lọc theo tìm kiếm mã đơn hàng
+      if (searchFilter && !orderCode.includes(searchFilter)) {
+        show = false;
+      }
+
+      // Lọc theo ngày đặt
+      if (dateFilter && date !== formatDate(dateFilter)) {
+        show = false;
+      }
+
+      // Lọc theo tình trạng
+      if (statusFilter && status !== statusFilter) {
+        show = false;
+      }
+
+      // Lọc theo phương thức thanh toán
+      if (paymentFilter && payment !== paymentFilter) {
+        show = false;
+      }
+
+      // Lọc theo tổng tiền tối thiểu
+      if (amountFilter && totalAmount < amountFilter) {
+        show = false;
+      }
+
+      rows[i].style.display = show ? '' : 'none';
+    }
+  }
+
+  // Hàm định dạng ngày từ input type="date" (YYYY-MM-DD) thành DD/MM/YYYY
+  function formatDate(dateString) {
+    var parts = dateString.split('-');
+    return parts[2] + '/' + parts[1] + '/' + parts[0];
+  }
+</script>
 
 </html>
