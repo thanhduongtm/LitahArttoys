@@ -77,30 +77,24 @@
         .product-details td:last-child {
             text-align: right;
         }
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            border-top: 1px solid #f0f4f8;
-            background-color: #f8f9fa;
+        .buttons a.complete {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color:#e8885f;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
         }
-        .buttons button {
-            width: 48%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            color: white;
+
+        .buttons a.complete:hover {
+        background-color: #ffedda;
+        color: #e8885f;
         }
-        .complete {
-            background-color: #e8885f;
-        }
-        .complete:hover {
-            background-color: #ffedda;
-            color: #e8885f;
-        }
+
         .thead{
             color:#e8885f;
         }
@@ -174,8 +168,8 @@
             </table>
         </div>
         <div class="buttons">
-            <button class="complete">QUAY LẠI</button>
-        </div>
-    </div>
+            <a href="LichSuMuaHang.html" class="complete">QUAY LẠI</a>
+        </div>        
+</div>
 </body>
 </html>
