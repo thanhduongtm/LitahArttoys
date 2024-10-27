@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#ffedda;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .order-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e8885f;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+        }
+        .status {
+            background-color: #ffedda;
+            color: #e8885f;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .order-details, .product-details {
+            padding: 20px;
+        }
+        h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .product-details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+        .product-details th, .product-details td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        .product-details th {
+            color: #666;
+            font-weight: normal;
+        }
+        .product-details td:last-child {
+            text-align: right;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-top: 1px solid #f0f4f8;
+            background-color: #f8f9fa;
+        }
+        .buttons button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: white;
+        }
+        .complete {
+            background-color: #e8885f;
+        }
+        .complete:hover {
+            background-color: #ffedda;
+            color: #e8885f;
+        }
+        .thead{
+            color:#e8885f;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .order-container {
+                max-width: 90%;
+            }
+            .order-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .order-header h2 {
+                font-size: 16px;
+            }
+            .status {
+                font-size: 11px;
+                padding: 4px 8px;
+            }
+            .contact-info p, .product-details th, .product-details td {
+                font-size: 13px;
+            }
+            .buttons button {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <div class="order-header">
+            <h2>Đơn hàng LA980</h2>
+            <span class="status">04/10/2024</span> </br>
+            <span class="status">Đang xử lý</span>
+        </div>
+        <div class="order-details">
+            <h3>Thông tin thanh toán</h3>
+            <div class="contact-info">
+                <p>Dương Thị Mỹ Thanh</p>
+                <p>86 Tản Đà</p>
+                <p>Phường 11, Quận 5</p>
+                <p>Hồ Chí Minh</p>
+                <p>Email: <a href="mailto:thanhduongdm@gmail.com">thanhduongdm@gmail.com</a></p>
+                <p>Số điện thoại: 0868959902</p>
+                <p>Phương thức thanh toán: COD (Thanh toán khi nhận hàng)</p>
+            </div>
+        </div>
+        <div class="product-details">
+            <h3>Thông tin sản phẩm</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá tiền</th>
+                        <th>Phí giao hàng</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SPACE MOLLY LOUIS GUZMAN</td>
+                        <td>1</td>
+                        <td>6.500.000 VND</td>
+                        <td>0 VND</td>
+                        <td>6.500.000 VND</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="buttons">
+            <button class="complete">QUAY LẠI</button>
+        </div>
+    </div>
+</body>
+</html>
