@@ -331,12 +331,13 @@
       <div class="col-12">
         <div class="d-flex justify-content-between">
           <div>
-            <a href="#" class="filter-link">Tất cả (1198)</a> | 
-            <a href="#" class="filter-link">Đang xử lý (1)</a> | 
-            <a href="#" class="filter-link">Tạm giữ (1)</a> | 
-            <a href="#" class="filter-link">Đã hoàn thành (1195)</a> | 
-            <a href="#" class="filter-link">Đã hoàn tiền (1)</a>
+            <a href="#" class="filter-link" data-filter="Tất cả">Tất cả (1198)</a> | 
+            <a href="#" class="filter-link" data-filter="Đang xử lý">Đang xử lý (1)</a> | 
+            <a href="#" class="filter-link" data-filter="Tạm giữ">Tạm giữ (0)</a> | 
+            <a href="#" class="filter-link" data-filter="Đã hoàn thành">Đã hoàn thành (1196)</a> | 
+            <a href="#" class="filter-link" data-filter="Đã hoàn tiền">Đã hoàn tiền (1)</a>
           </div>
+
           <div class="d-flex align-items-center">
             <input type="text" class="form-control me-2" placeholder="Tìm đơn hàng" style="width: 200px;" id="filter-search">
             <input type="date" class="form-control me-2" id="filter-date" placeholder="Chọn ngày đặt">
@@ -488,7 +489,7 @@
             </td>
             <td data-label="Mã đơn hàng">LA499</td>
             <td data-label="Ngày đặt">01/10/2024</td>
-            <td data-label="Tình trạng">Đã hoàn thành</td>
+            <td data-label="Tình trạng">Đã hoàn tiền</td>
             <td data-label="Phương thức thanh toán"> THẺ NGÂN HÀNG </td>
             <td data-label="Tổng tiền"> 4.800.000VNĐ </td>
             <td class="actions-cell">
@@ -611,6 +612,28 @@
 
 </body>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Adding event listeners to each filter link
+  document.querySelectorAll('.filter-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      filterOrdersByStatus(this.getAttribute('data-filter'));
+    });
+  });
+
+  function filterOrdersByStatus(statusFilter) {
+    var table = document.getElementById('order-table');
+    var tbody = table.getElementsByTagName('tbody')[0];
+    var rows = tbody.getElementsByTagName('tr');
+
+    for (var i = 0; i < rows.length; i++) {
+      var status = rows[i].getElementsByTagName('td')[3].textContent.trim();
+      rows[i].style.display = (statusFilter === "Tất cả" || status === statusFilter) ? '' : 'none';
+    }
+  }
+});
+
+
   // JavaScript để áp dụng các bộ lọc khi nhấn nút "Áp dụng"
   document.getElementById('apply-filters').addEventListener('click', filterOrders);
 
